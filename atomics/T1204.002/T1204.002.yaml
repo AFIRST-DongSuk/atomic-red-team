@@ -187,7 +187,7 @@ atomic_tests:
     uname:
       description: Username for pathing
       type: String
-      default: $env:Username
+      default: USER.CONTOSO
   dependency_executor_name: powershell
   dependencies:
   - description: |
@@ -245,6 +245,7 @@ atomic_tests:
       $sheet.Cells.Item(23,1) = "=HALT()"
       $sheet.Cells.Item(1,1).Name = "runme"
       $xlApp.Run("runme")
+      $xlApp.Visible = $false
       $xlApp.Quit()
 
       [System.Runtime.Interopservices.Marshal]::ReleaseComObject($xlBook) | Out-Null
