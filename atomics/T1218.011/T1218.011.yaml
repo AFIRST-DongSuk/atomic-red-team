@@ -205,7 +205,7 @@ atomic_tests:
     input_file:
       description: Non-dll file
       type: String
-      default: C:\Users\$env:username\Downloads\calc.png
+      default: C:\Users\USER.CONTOSO\Downloads\calc.png
   dependency_executor_name: powershell 
   dependencies: 
   - description: |
