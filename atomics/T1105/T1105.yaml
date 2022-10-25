@@ -562,11 +562,11 @@ atomic_tests:
     binary_file:
       description: Binary file to copy to remote machines
       type: string
-      default: $env:comspec
+      default: PathToAtomicsFolder\T1105\src\T1105.exe
     exe_remote_folder:
       description: Path to store executable on remote machine (no drive letter)
       type: String
-      default: \Windows\Temp\T1105.exe
+      default: \Windows\Temp
     remote_drive_letter:
       description: Remote drive letter
       type: String
@@ -585,6 +585,7 @@ atomic_tests:
       if (Test-Path "$env:temp\T1105MachineList.txt") {exit 0} else {exit 1}
     get_prereq_command: |
       new-item -path "$env:temp\T1105MachineList.txt"
+      set-Content -Path "$env:temp\T1105MachineList.txt" -Value 'COMPANYDC1' 
       echo "A machine list file has been generated at "$env:temp\T1105MachineList.txt". Please enter the machines to target there, one machine per line."
   executor:
     command: |
