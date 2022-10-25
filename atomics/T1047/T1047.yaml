@@ -87,15 +87,15 @@ atomic_tests:
     node:
       description: Ip Address
       type: String
-      default: 192.168.1.100
+      default: 127.0.0.1
     user_name:
       description: Username
       type: String
-      default: CONTOSO\Administrator
+      default: DOMAIN\Administrator
     password:
       description: Password
       type: String
-      default: Password123!
+      default: P@ssw0rd1
     process_to_execute:
       description: Name or path of process to execute.
       type: String
