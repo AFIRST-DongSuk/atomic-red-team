@@ -157,15 +157,18 @@ atomic_tests:
     user_name:
       description: username including domain.
       type: String
-      default: 'domain\user'
+      #default: 'domain\user'
+      default: 'CONTOSO\Administrator'
     acct_pass:
       description: Account password.
       type: String
-      default: "password"
+      #default: "password"
+      default: "Password123!"
     host_name:
       description: hostname or ip address to connect to.
       type: String
-      default: "192.168.1.1"
+      #default: "192.168.1.1"
+      default: "192.168.1.100"
   dependency_executor_name: powershell
   dependencies:
   - description: |
