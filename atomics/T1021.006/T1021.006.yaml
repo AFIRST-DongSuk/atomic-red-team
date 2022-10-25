@@ -26,15 +26,18 @@ atomic_tests:
     username:
       description: The username running the powershell command
       type: string
-      default: $env:USERNAME
+      #default: $env:USERNAME
+      default: CONTOSO\Administrator
     remotehost:
       description: The remote hostname of the machine you are running the powershell command on.
       type: string
-      default: $env:COMPUTERNAME
+      #default: $env:COMPUTERNAME
+      default: COMPANYDC1
     password:
       description: The password to be used with the user provided in the previous input argument.
       type: string
-      default: test12345
+      #default: test12345
+      default: Password123!
   executor:
     command: |-
       $SecPassword = ConvertTo-SecureString "#{password}" -AsPlainText -Force

@@ -1,0 +1,45 @@
+attack_technique: T1021.004
+display_name: 'Remote Services: SSH'
+atomic_tests:
+- name: Putty SSH Connection
+  auto_generated_guid: 9c780d3d-3a14-4278-8ee5-faaeb2ccfbe0
+  description: |-
+    T1021.004 Remote Services : SSH
+    
+  supported_platforms:
+  - windows
+  input_arguments:
+    User_Name:
+      description: DC Admin User
+      type: String
+      default: contoso\Administrator
+    User_Password:
+      description: DC Admin Password
+      type: String
+      default: Password123!
+    Remote_host:
+      description: DC Address
+      type: String
+      default: 192.168.1.100
+    putty_exe:
+      description: Path of putty executable
+      type: Path
+      default: PathToAtomicsFolder\T1021.004\src\putty.exe
+  dependencies:
+  - description: |
+      Putty tool from Sysinternals must exist on disk at specified location (#{putty_exe})
+    prereq_command: |
+      if (Test-Path #{putty_exe}) {exit 0} else {exit 1}
+    get_prereq_command: |
+      Invoke-WebRequest "https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe" -OutFile "$env:TEMP\putty.exe"
+      copy $env:TEMP\putty.exe #{putty_exe}
+      
+  executor:
+    command: |-
+      .$env:TEMP\putty -ssh #{User_Name}@#{Remote_host} -pw #{User_Password}
+      sleep 2
+      Stop-Process -name "Putty"
+    cleanup_command: |-
+      Remove-Item -Path #{putty_exe} -ErrorAction Ignore
+      Remove-Item -Path $env:TEMP\putty.exe -ErrorAction Ignore
+    name: powershell
