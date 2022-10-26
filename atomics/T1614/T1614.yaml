@@ -1,0 +1,16 @@
+attack_technique: T614
+display_name: 'System Location Discovery'
+atomic_tests:
+- name: System Location Discovery 
+  auto_generated_guid: 5073adf8-9a50-4bd9-b298-a9bd2ead8af9
+  description: |
+    Upon successful execution, remote computer's locale will be displayed
+  supported_platforms:
+  - windows
+  executor:
+    name: powershell
+    elevation_required: false
+    command: |
+      $password = ConvertTo-SecureString "Password123!" -AsPlainText -Force
+      $Cred = New-Object System.Management.Automation.PSCredential ("contoso\administrator", $password)
+      Invoke-Command -ComputerName COMPANYDC1 -Credential $Cred -ScriptBlock {GET-WinSystemLocale}
