@@ -1,0 +1,27 @@
+attack_technique: T1059.007
+display_name: "Command and Scripting Interpreter: JavaScript"
+atomic_tests:
+- name: "Command and Scripting Interpreter: JavaScript"
+  auto_generated_guid: d6042746-07d4-4c92-9ad8-e644c114a231
+  description: |
+    test
+  supported_platforms:
+  - windows
+  input_arguments:
+    java_script:
+      description: Path of putty executable
+      type: Path
+      default: PathToAtomicsFolder\T1059.007/src/T1059_007.js
+  dependencies:
+  - description: |
+      T1059.007.js file from Sysinternals must exist on disk at specified location (#{java_script})
+    prereq_command: |
+      if (Test-Path #{java_script}) {exit 0} else {exit 1}
+    get_prereq_command: |
+      Invoke-WebRequest "https://github.com/crav3r/atomic-red-team/tree/round5test/atomics/T1059.007/src/T0159_007.js" -OutFile "$env:TEMP\T1059_007.js"
+      copy $env:TEMP\T1059_007.js #{java_script}
+  
+  executor:
+    command: |
+      wscript #{java_script}
+    name: command_prompt
