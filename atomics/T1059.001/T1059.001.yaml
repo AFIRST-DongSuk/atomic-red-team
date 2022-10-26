@@ -238,7 +238,7 @@ atomic_tests:
     hostname_to_connect:
       description: The host to connect to, by default it will connect to the local machine
       type: String
-      default: $env:COMPUTERNAME
+      default: COMPANYDC1
 
   dependencies:
   - description: |
@@ -252,17 +252,18 @@ atomic_tests:
           exit 1
       }
     get_prereq_command: |
-      Enable-PSRemoting
+      Enable-PSRemotingR
 
   executor:
     name: powershell
     elevation_required: true
     command: |
-      New-PSSession -ComputerName #{hostname_to_connect}
-      Test-Connection $env:COMPUTERNAME
-      Set-Content -Path $env:TEMP\T1086_PowerShell_Session_Creation_and_Use -Value "T1086 PowerShell Session Creation and Use"
-      Get-Content -Path $env:TEMP\T1086_PowerShell_Session_Creation_and_Use
-      Remove-Item -Force $env:TEMP\T1086_PowerShell_Session_Creation_and_Use
+      $s = New-PSSession -ComputerName #{hostname_to_connect}
+      Invoke-Command -Session $s -ScriptBlock {Set-Content -Path C:\Windows\TEMP\T1086_PowerShell_Session_Creation_and_Use -Value "T1086 PowerShell Session Creation and Use"}
+    cleanup_command: |
+      $s = New-PSSession -ComputerName #{hostname_to_connect}
+      Invoke-Command -Session $s -ScriptBlock {Remove-Item -Force C:\Windows\TEMP\T1086_PowerShell_Session_Creation_and_Use}
+      Remove-PSSession $s
 
 - name: ATHPowerShellCommandLineParameter -Command parameter variations
   auto_generated_guid: 686a9785-f99b-41d4-90df-66ed515f81d7

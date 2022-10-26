@@ -64,7 +64,8 @@ atomic_tests:
     user_name:
       description: 'Username to authenticate with, format: DOMAIN\User'
       type: String
-      default: DOMAIN\user
+      #default: DOMAIN\user
+      default: CONTOSO\user
     password:
       description: Password to authenticate with
       type: String
@@ -73,7 +74,8 @@ atomic_tests:
     name: command_prompt
     elevation_required: true
     command: |
-      SCHTASKS /Create /S #{target} /RU #{user_name} /RP #{password} /TN "Atomic task" /TR "#{task_command}" /SC daily /ST #{time}
+      SCHTASKS /Create /S #{target} /RU #{user_name} /RP #{password} /TN "Atomic task" /TR "#{task_command}" /SC daily /ST #{time} /F
+      
     cleanup_command: |
       SCHTASKS /Delete /S #{target} /U #{user_name} /P #{password} /TN "Atomic task" /F >nul 2>&1
 - name: Powershell Cmdlet Scheduled Task

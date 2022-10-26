@@ -11,7 +11,8 @@ atomic_tests:
     user_name:
       description: Username
       type: String
-      default: DOMAIN\Administrator
+      #default: DOMAIN\Administrator
+      default: CONTOSO\Administrator
     share_name:
       description: Examples C$, IPC$, Admin$
       type: String
@@ -19,11 +20,13 @@ atomic_tests:
     password:
       description: Password
       type: String
-      default: P@ssw0rd1
+      #default: P@ssw0rd1
+      default: Password123!
     computer_name:
       description: Target Computer Name
       type: String
-      default: Target
+      #default: Target
+      default: COMAPNYDC1
   executor:
     command: |
       cmd.exe /c "net use \\#{computer_name}\#{share_name} #{password} /u:#{user_name}"
@@ -46,7 +49,8 @@ atomic_tests:
     computer_name:
       description: Target Computer Name
       type: String
-      default: Target
+      #default: Target
+      default: COMPANYDC1
   executor:
     command: |
       New-PSDrive -name #{map_name} -psprovider filesystem -root \\#{computer_name}\#{share_name}
@@ -61,11 +65,13 @@ atomic_tests:
     command_path:
       description: File to copy and execute
       type: Path
-      default: C:\Windows\System32\cmd.exe
+      #default: C:\Windows\System32\cmd.exe
+      default: C:\Windows\System32\calc.exe
     remote_host:
       description: Remote computer to receive the copy and execute the file
       type: String
-      default: '\\localhost'
+      #default: '\\localhost'
+      default: '\\COMPANYDC1'
     psexec_exe:
       description: Path to PsExec
       type: string

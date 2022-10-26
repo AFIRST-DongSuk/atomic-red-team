@@ -1,0 +1,28 @@
+attack_technique: T1059.007
+display_name: "Command and Scripting Interpreter: JavaScript"
+atomic_tests:
+- name: "Command and Scripting Interpreter: JavaScript"
+  auto_generated_guid: d6042746-07d4-4c92-9ad8-e644c114a231
+  description: |
+    test
+  supported_platforms:
+  - windows
+  input_arguments:
+    js_path:
+      description: Path of putty executable
+      type: Path
+      default: PathToAtomicsFolder\T1059.007/src/
+  dependencies:
+  - description: |
+      T1059_007.js must be located at #{js_path}
+    prereq_command: |
+      if (Test-Path #{js_path}\T1059.007.js) {exit 0} else {exit 1}
+    get_prereq_command: |
+      Invoke-WebRequest "https://raw.githubusercontent.com/crav3r/atomic-red-team/round5test/atomics/T1059.007/src/T1059_007.js" -OutFile "#{js_path}\T1059_007.js"
+    
+  executor:
+    command: |
+      wscript #{js_path}\T1059_007.js
+    cleanup_command: |
+      Remove-Item $env:Systemroot\Temp\T1059_007.txt -Force    
+    name: powershell
