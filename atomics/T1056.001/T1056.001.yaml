@@ -201,7 +201,7 @@ atomic_tests:
     elevation_required: false
 atomic_tests:
 - name: Input Capture(A-FRIST)
-  auto_generated_guid: 264d67b7-75c6-4022-9428-2320817256c4
+  auto_generated_guid: b28410bf-eaa2-44e8-bd98-a5ba496e12e7
   description: |
     Utilize PowerShell and external resource to capture keyLogger
     [Payload](https://github.com/hemantapkh/PySimpleLogger/blob/master/WinSimpleLogger.py)
