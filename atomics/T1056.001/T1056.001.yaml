@@ -208,7 +208,7 @@ atomic_tests:
 
     1. Powershell will execute `Get-Keystrokes-afirst.py` 
     2. you can write to anything from powershell prompt (press exit, it will be done)
-    3. output will be created from PathToAtomic\T1056.001\src\logs.txt
+    3. output will be created from C:\atomic-red-team\atomics\T1056.001\src\logs.txt
   supported_platforms:
   - windows
   dependencies:
