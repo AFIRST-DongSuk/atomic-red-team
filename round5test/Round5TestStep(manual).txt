@@ -11,3 +11,8 @@ Step 2. invoke-atomictest T1003 -testnumber 2 -ExecutionLogPath $ExecutionLogPat
 Step 3. Step2 진행 후 로그아웃 해야지 파일이 생성됨. (Windows lock으로는 안됨). 
 Step 4. invoke-atomictest T1003 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath 실행
 
+
+#------------------------------------------------------------
+# T1003.001 - OS Credential Dumping: LSASS Memory
+# Atomic Test 2 - Credential Dumping with NPPSpy
+#------------------------------------------------------------
