@@ -36,7 +36,3 @@ invoke-atomictest T1003.003 -testnumber 8 -Cleanup  -ExecutionLogPath $Executio
 # T1018 - Remote System Discovery
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1018 -testnumber 16 -ExecutionLogPath $ExecutionLogPath #  AD에서 실행, 관리자 권한
-
-#---------------------------------------------------------------------------------------
-# T1110.003 - Brute Force: Password Spraying
-#---------------------------------------------------------------------------------------
