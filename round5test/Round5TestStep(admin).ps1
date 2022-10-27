@@ -258,6 +258,45 @@ invoke-atomictest T1036.004 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionL
 #invoke-atomictest T1037.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1037.001 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
 
+ #------------------------------------------------------------
+ # credential-access - Network Sniffing(T1040)
+
+#invoke-atomictest T1040 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1040 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1040 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1040 -testnumber 4 -ExecutionLogPath $ExecutionLogPath 
+invoke-atomictest T1040 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath 
+invoke-atomictest T1040 -testnumber 5 -ExecutionLogPath $ExecutionLogPath 
+invoke-atomictest T1040 -testnumber 5 -Cleanup -ExecutionLogPath $ExecutionLogPath 
+invoke-atomictest T1040 -testnumber 6 -ExecutionLogPath $ExecutionLogPath 
+invoke-atomictest T1040 -testnumber 6 -Cleanup -ExecutionLogPath $ExecutionLogPath 
+
+ #------------------------------------------------------------
+ # exfiltration - Exfiltration Over C2 Channel(T1041)
+
+ #invoke-atomictest T1041 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+
+ #------------------------------------------------------------
+ # exfiltration - Windows Management Instrumentation(T1047)
+ 
+#invoke-atomictest T1047 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1047 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1047 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1047 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1047 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1047 -testnumber 5 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1047 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1047 -testnumber 6 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1047 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1047 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1047 -testnumber 8 -Cleanup -ExecutionLogPath $ExecutionLogPath 
+#invoke-atomictest T1047 -testnumber 9 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1047 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1047 -testnumber 9 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1047 -testnumber 10 -Getprereqs -ExecutionLogPath $ExecutionLogPath 
+invoke-atomictest T1047 -testnumber 10 -ExecutionLogPath $ExecutionLogPath 
+invoke-atomictest T1047 -testnumber 10 -Cleanup -ExecutionLogPath $ExecutionLogPath 
+
 
 
 
