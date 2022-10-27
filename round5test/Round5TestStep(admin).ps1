@@ -123,15 +123,14 @@ invoke-atomictest T1003.001 -testnumber 12 -Cleanup -ExecutionLogPath $Execution
 #invoke-atomictest T1018 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1018 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1018 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1018 -testnumber 9 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1018 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1018 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1018 -testnumber 11 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1018 -testnumber 15 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1018 -testnumber 17 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1018 -testnumber 18 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1018 -testnumber 19 -ExecutionLogPath $ExecutionLogPath
-
-invoke-atomictest T1018 -testnumber 9 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1018 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
 
 #------------------------------------------------------------
 # exfiltration - Automated Exfiltration(T1020)
@@ -156,3 +155,148 @@ invoke-atomictest T1021.002 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 
 #------------------------------------------------------------
 # lateral-movement - Remote Services(T1021) T1021.004 - SSH
+
+#invoke-atomictest T1021.004 -testnumber 1 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1021.004 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1021.004 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+
+#------------------------------------------------------------
+# lateral-movement - Remote Services(T1021) T1021.006 - Windows Remote Management
+
+invoke-atomictest T1021.006 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1021.006 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1021.006 -testnumber 3 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1021.006 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+
+#------------------------------------------------------------
+# defense-evasion - Obfuscated Files or Information(T1027)
+
+#invoke-atomictest T1027 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1027 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1027 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1027 -testnumber 3 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1027 -testnumber 4 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1027 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1027 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1027 -testnumber 5 -ExecutionLogPath $ExecutionLogPath #메일 전송 문제
+#invoke-atomictest T1027 -testnumber 6 -ExecutionLogPath $ExecutionLogPath #HTTP 방식으로 민감 데이터 전송 (서버 구축 필요)
+#invoke-atomictest T1027 -testnumber 7 -ExecutionLogPath $ExecutionLogPath #MANUAL?
+#invoke-atomictest T1027 -testnumber 7 -ExecutionLogPath $ExecutionLogPath #MANUAL?
+
+#------------------------------------------------------------
+# defense-evasion - Obfuscated Files or Information(T1027) T1027.002 - Software Packing
+
+#invoke-atomictest T1027.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1027.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1027.002 -testnumber 3 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1027.002 -testnumber 4 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+
+#------------------------------------------------------------
+# defense-evasion - Obfuscated Files or Information(T1027) T1027.003 - Steganography
+
+#N/A
+
+#------------------------------------------------------------
+# defense-evasion - Obfuscated Files or Information(T1027) T1027.005 - Indicator Removal from Tools
+
+#N/A
+
+#------------------------------------------------------------
+# exfiltration - Scheduled Transfer(T1029)
+
+#N/A
+
+#------------------------------------------------------------
+# exfiltration - Data Transfer Size Limits(T1030)
+
+#invoke-atomictest T1030 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+
+#------------------------------------------------------------
+# discovery - System Owner/User Discovery(T1033)
+
+#invoke-atomictest T1033 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1033 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1033 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1033 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1033 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1033 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1033 -testnumber 5 -Cleanup -ExecutionLogPath $ExecutionLogPath
+
+#------------------------------------------------------------
+# defense-evasion - Masquerading(T1036)
+
+#invoke-atomictest T1036 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1036 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1036 -testnumber 2 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1036 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1036 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath
+
+#------------------------------------------------------------
+# defense-evasion - Masquerading(T1036) T1036.004 - Masquerade Task or Service
+
+invoke-atomictest T1036.004 -testnumber 1 -ExecutionLogPath $ExecutionLogPath 
+invoke-atomictest T1036.004 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1036.004 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1036.004 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPathinvoke
+
+#------------------------------------------------------------
+# defense-evasion - Masquerading(T1036) T1036.005 - Match Legitimate Name or Location
+
+#invoke-atomictest T1036.005 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1036.005 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1036.005 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath
+
+#------------------------------------------------------------
+# defense-evasion - Masquerading(T1036) T1036.006 - Space after Filename
+
+#invoke-atomictest T1036.006 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1036.006 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+
+#------------------------------------------------------------
+# persistence - Boot or Logon Initialization Scripts(T1037)
+
+#invoke-atomictest T1037.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1037.001 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+
+ #------------------------------------------------------------
+ # credential-access - Network Sniffing(T1040)
+
+#invoke-atomictest T1040 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1040 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1040 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1040 -testnumber 4 -ExecutionLogPath $ExecutionLogPath 
+invoke-atomictest T1040 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath 
+invoke-atomictest T1040 -testnumber 5 -ExecutionLogPath $ExecutionLogPath 
+invoke-atomictest T1040 -testnumber 5 -Cleanup -ExecutionLogPath $ExecutionLogPath 
+invoke-atomictest T1040 -testnumber 6 -ExecutionLogPath $ExecutionLogPath 
+invoke-atomictest T1040 -testnumber 6 -Cleanup -ExecutionLogPath $ExecutionLogPath 
+
+ #------------------------------------------------------------
+ # exfiltration - Exfiltration Over C2 Channel(T1041)
+
+ #invoke-atomictest T1041 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+
+ #------------------------------------------------------------
+ # exfiltration - Windows Management Instrumentation(T1047)
+ 
+#invoke-atomictest T1047 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1047 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1047 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1047 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1047 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1047 -testnumber 5 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1047 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1047 -testnumber 6 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1047 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1047 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1047 -testnumber 8 -Cleanup -ExecutionLogPath $ExecutionLogPath 
+#invoke-atomictest T1047 -testnumber 9 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1047 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1047 -testnumber 9 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1047 -testnumber 10 -Getprereqs -ExecutionLogPath $ExecutionLogPath 
+invoke-atomictest T1047 -testnumber 10 -ExecutionLogPath $ExecutionLogPath 
+invoke-atomictest T1047 -testnumber 10 -Cleanup -ExecutionLogPath $ExecutionLogPath 
+
+
+
+
