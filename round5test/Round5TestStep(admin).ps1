@@ -165,8 +165,6 @@ invoke-atomictest T1021.002 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 
 invoke-atomictest T1021.006 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1021.006 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1021.006 -testnumber 3 -Getprereqs -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1021.006 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 
 #------------------------------------------------------------
 # defense-evasion - Obfuscated Files or Information(T1027)
@@ -373,3 +371,859 @@ invoke-atomictest T1055.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # 
 #invoke-atomictest T1056.001 -testnumber 5 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
 #invoke-atomictest T1056.001 -testnumber 6 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
 #invoke-atomictest T1056.001 -testnumber 7 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+
+###### 윗부분 확인 필요 ######
+
+#---------------------------------------------------------------------------------------
+# T1018 - Remote System Discovery
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1057 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1057 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1057 -testnumber 4 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1057 -testnumber 5 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+#invoke-atomictest T1057 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+
+#---------------------------------------------------------------------------------------
+# T1059.001 - Command and Scripting Interpreter: PowerShell
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1059.001 -testnumber 2 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 3 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 11 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 11 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 12 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 12 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 12 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 13 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 13 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 13 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 15 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 15 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 16 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 16 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 17 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 17 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 18 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 18 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 19 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 20 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.001 -testnumber 21 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1059.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1059.001 -testnumber 5 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1059.001 -testnumber 14 -Getprereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1059.001 -testnumber 14 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+#invoke-atomictest T1059.001 -testnumber 10 -ExecutionLogPath $ExecutionLogPath # 수동 실행
+#invoke-atomictest T1059.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+
+#---------------------------------------------------------------------------------------
+# T1059.003 - Command and Scripting Interpreter: Windows Command Shell
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1059.003 -testnumber 1 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.003 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.003 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.003 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.003 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.003 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.003 -testnumber 4 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.003 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.003 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.003 -testnumber 5 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1059.003 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1056.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1056.001 -testnumber 3 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1056.001 -testnumber 4 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1056.001 -testnumber 5 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1056.001 -testnumber 6 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1056.001 -testnumber 7 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+
+#---------------------------------------------------------------------------------------
+# T1059.004 - Command and Scripting Interpreter: Bash
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1059.004 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1059.004 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1059.004 -testnumber 3 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1059.004 -testnumber 4 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+
+#---------------------------------------------------------------------------------------
+# T1059.006 - Command and Scripting Interpreter: Python
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1059.006 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1059.006 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1059.006 -testnumber 3 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1059.006 -testnumber 4 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+
+#---------------------------------------------------------------------------------------
+# T1069.001 - Permission Groups Discovery: Local Groups
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1069.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1069.001 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1069.001 -testnumber 4 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1069.001 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1069.001 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1069.001 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1069.001 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1069.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+
+#---------------------------------------------------------------------------------------
+# T1069.002 - Permission Groups Discovery: Domain Groups
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1069.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1069.002 -testnumber 5 -ExecutionLogPath $ExecutionLogPath 
+#invoke-atomictest T1069.002 -testnumber 6 -ExecutionLogPath $ExecutionLogPath 
+#invoke-atomictest T1069.002 -testnumber 8 -Getprereqs -ExecutionLogPath $ExecutionLogPath 
+#invoke-atomictest T1069.002 -testnumber 8 -ExecutionLogPath $ExecutionLogPath 
+#invoke-atomictest T1069.002 -testnumber 9 -ExecutionLogPath $ExecutionLogPath 
+#invoke-atomictest T1069.002 -testnumber 10 -ExecutionLogPath $ExecutionLogPath 
+#invoke-atomictest T1069.002 -testnumber 11 -ExecutionLogPath $ExecutionLogPath 
+#invoke-atomictest T1069.002 -testnumber 12 -ExecutionLogPath $ExecutionLogPath 
+#invoke-atomictest T1069.002 -testnumber 13 -ExecutionLogPath $ExecutionLogPath 
+invoke-atomictest T1069.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1069.002 -testnumber 4 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1069.002 -testnumber 7 -Getprereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1069.002 -testnumber 7 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+#invoke-atomictest T1069.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+
+#---------------------------------------------------------------------------------------
+# T1070 - Indicator Removal on Host
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1070 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+
+#---------------------------------------------------------------------------------------
+# T1070.001 - Indicator Removal on Host: Clear Windows Event Logs
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1070.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1070.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1070.001 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+
+#---------------------------------------------------------------------------------------
+# T1070.002 - Indicator Removal on Host: Clear Linux or Mac System Logs
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1070.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1070.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1070.002 -testnumber 3 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+
+#---------------------------------------------------------------------------------------
+# T1070.003 - Indicator Removal on Host: Clear Command History
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1070.003 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1070.003 -testnumber 10 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1070.003 -testnumber 11 -ExecutionLogPath $ExecutionLogPath 
+#invoke-atomictest T1070.003 -testnumber 12 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1070.003 -testnumber 12 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1070.003 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1070.003 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1070.003 -testnumber 3 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1070.003 -testnumber 4 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1070.003 -testnumber 5 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1070.003 -testnumber 6 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1070.003 -testnumber 7 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1070.003 -testnumber 8 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1070.003 -testnumber 9 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+
+#---------------------------------------------------------------------------------------
+# T1070.004 - Indicator Removal on Host: File Deletion
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1070.004 -testnumber 4 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1070.004 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1070.004 -testnumber 5 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1070.004 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1070.004 -testnumber 6 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1070.004 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1070.004 -testnumber 7 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1070.004 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1070.004 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1070.004 -testnumber 9 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+#invoke-atomictest T1070.004 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1070.004 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1070.004 -testnumber 3 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1070.004 -testnumber 8 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+
+#---------------------------------------------------------------------------------------
+# T1071.001 - Application Layer Protocol: Web Protocols
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1071.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1071.001 -testnumber 2 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1071.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1071.001 -testnumber 3 -Getprereqs -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+
+#---------------------------------------------------------------------------------------
+# T1074.001 - Application Layer Protocol: Web Protocols
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1074.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1074.001 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1074.001 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1074.001 -testnumber 3 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1074.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+
+#---------------------------------------------------------------------------------------
+# T1078.001 - Valid Accounts: Default Accounts
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1078.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1078.001 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1078.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1078.001 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+
+#---------------------------------------------------------------------------------------
+# T1078.003 - Valid Accounts: Local Accounts
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1078.003 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1078.003 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1078.003 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1078.003 -testnumber 4 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1078.003 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+
+#---------------------------------------------------------------------------------------
+# T1082 - System Information Discovery
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1082 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1082 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1082 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1082 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1082 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1082 -testnumber 13 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1082 -testnumber 14 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1082 -testnumber 15 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1082 -testnumber 16 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1082 -testnumber 17 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1082 -testnumber 18 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1082 -testnumber 19 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1082 -testnumber 20 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1082 -testnumber 21 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1082 -testnumber 22 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+#invoke-atomictest T1082 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1082 -testnumber 3 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1082 -testnumber 4 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1082 -testnumber 5 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1082 -testnumber 7 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1082 -testnumber 11 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1082 -testnumber 12 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1082 -testnumber 24 -ExecutionLogPath $ExecutionLogPath  #Linux/macOS
+
+#---------------------------------------------------------------------------------------
+# T1083 - File and Directory Discovery
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1083 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1083 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1083 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1083 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1083 -testnumber 5 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1083 -testnumber 6 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1083 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1083 -testnumber 3 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1083 -testnumber 4 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+
+#---------------------------------------------------------------------------------------
+# T1087.001 - Account Discovery: Local Account
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1087.001 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1087.001 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1087.001 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1087.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1087.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1087.001 -testnumber 3 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1087.001 -testnumber 4 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1087.001 -testnumber 5 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1087.001 -testnumber 6 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1087.001 -testnumber 7 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+
+#---------------------------------------------------------------------------------------
+# T1087.002 - Account Discovery: Domain Account
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1087.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1087.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1087.002 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1087.002 -testnumber 4 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1087.002 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1087.002 -testnumber 5 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1087.002 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1087.002 -testnumber 6 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1087.002 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1087.002 -testnumber 7 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1087.002 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1087.002 -testnumber 8 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1087.002 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1087.002 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1087.002 -testnumber 10 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1087.002 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1087.002 -testnumber 11 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1087.002 -testnumber 12 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1087.002 -testnumber 13 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1087.002 -testnumber 14 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1087.002 -testnumber 15 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1087.002 -testnumber 16 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1087.002 -testnumber 16 -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1090.001 - Proxy: Internal Proxy
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1090.001 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1090.001 -testnumber 3 -Getprereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+#invoke-atomictest T1090.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1090.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+
+#---------------------------------------------------------------------------------------
+# T1095 - Non-Application Layer Protocol
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1095 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1095 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1095 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1105 - Ingress Tool Transfer
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1105 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1105 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1105 -testnumber 3 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1105 -testnumber 4 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1105 -testnumber 5 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1105 -testnumber 6 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1105 -testnumber 14 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1105 -testnumber 14 -Cleanup -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1105 -testnumber 27 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1105 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 7 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 8 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 10 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 13 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 15 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 16 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 17 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 17 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 18 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 18 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 18 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 19 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 19 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 20 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 21 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 21 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 21 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 22 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 22 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 23 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 23 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 24 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 24 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 25 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 25 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 26 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 26 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 28 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 28 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 28 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 29 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1105 -testnumber 29 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1105 -testnumber 11 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1105 -testnumber 12 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1105 -testnumber 12 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+
+#---------------------------------------------------------------------------------------
+# T1106 - Native API
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1106 -testnumber 1 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1106 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1106 -testnumber 2 -ExecutionLogpath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1106 -testnumber 3 -ExecutionLogpath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1106 -testnumber 4 -ExecutionLogpath $ExecutionLogPath # 관리자 권한
+
+#---------------------------------------------------------------------------------------
+# T1110.003 - Brute Force: Password Spraying
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1110.003 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1110.003 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1110.003 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1110.003 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1110.003 -testnumber 6 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1110.003 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1110.003 -testnumber 8 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1110.003 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1112 - Brute Force: Password Spraying
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1112 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 3 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+#invoke-atomictest T1112 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1112 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1112 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1112 -testnumber 5 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1112 -testnumber 6 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 6 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 7 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 7 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 8 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 8 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 9 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 9 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 10 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 10 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 11 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 11 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 12 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 12 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 13 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 13 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 14 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 14 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 15 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 15 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 16 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 16 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 17 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 17 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 18 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 18 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 19 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 19 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 20 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 20 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 21 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 21 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 22 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 22 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 23 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 23 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 24 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 24 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 25 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 25 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 26 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 26 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 27 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 27 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 28 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 28 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 29 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 29 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 30 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 30 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 31 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 31 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 32 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 32 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 33 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 33 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 34 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 34 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 35 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 35 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 36 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 36 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 37 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 37 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 38 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 38 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 39 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 39 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 40 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 40 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+#invoke-atomictest T1112 -testnumber 41 -ExecutionLogPath $ExecutionLogPath # 관리자 권한 # manual
+#invoke-atomictest T1112 -testnumber 41 -Cleanup -ExecutionLogPath $ExecutionLogPath  # 관리자 권한 # manual
+invoke-atomictest T1112 -testnumber 42 -ExecutionLogPath $ExecutionLogPath  # 관리자 권한
+invoke-atomictest T1112 -testnumber 42 -Cleanup -ExecutionLogPath $ExecutionLogPath  # 관리자 권한
+invoke-atomictest T1112 -testnumber 43 -ExecutionLogPath $ExecutionLogPath  # 관리자 권한
+invoke-atomictest T1112 -testnumber 43 -Cleanup -ExecutionLogPath $ExecutionLogPath  # 관리자 권한
+
+#---------------------------------------------------------------------------------------
+# T1119 - Automated Collection
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1119 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1119 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1119 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1119 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1119 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1119 -testnumber 3 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1119 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1119 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1124 - System Time Discovery
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1124 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1124 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1124 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1124 -testnumber 3 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+
+#---------------------------------------------------------------------------------------
+# T1132.001 - Data Encoding: Standard Encoding
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1132.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1132.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1134.001 - Access Token Manipulation: Token Impersonation/Theft
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1134.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1134.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1134.001 -testnumber 3 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1134.001 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1134.001 -testnumber 4 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1134.001 -testnumber 4 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1134.001 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+
+#---------------------------------------------------------------------------------------
+# T1134.002 - Create Process with Token
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1134.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1134.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+
+#---------------------------------------------------------------------------------------
+# T1135 - Network Share Discovery
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1135 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1135 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1135 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1135 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1135 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1135 -testnumber 6 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1135 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1135 -testnumber 7 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1135 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1135 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1136.002 - Create Account: Domain Account
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1136.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1136.002 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1136.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1136.002 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1136.002 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1136.002 -testnumber 3 -Cleanup -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1137 - Office Application Startup
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1137 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1137 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1140 - Deobfuscate/Decode Files or Information
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1140 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1140 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1140 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1140 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1140 -testnumber 3 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1140 -testnumber 4 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1140 -testnumber 5 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1140 -testnumber 6 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+
+#---------------------------------------------------------------------------------------
+# T1204.002 - User Execution: Malicious File
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1204.002 -testnumber 1 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1204.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1204.002 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1204.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1204.002 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1204.002 -testnumber 3 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1204.002 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1204.002 -testnumber 3 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1204.002 -testnumber 4 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1204.002 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1204.002 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1204.002 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1204.002 -testnumber 6 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1204.002 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1204.002 -testnumber 7 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1204.002 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1204.002 -testnumber 8 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1204.002 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1204.002 -testnumber 9 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1204.002 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1204.002 -testnumber 10 -Cleanup -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1218 - Signed Binary Proxy Execution
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1218 -testnumber 1 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1218 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1218 -testnumber 3 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1218 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1218 -testnumber 8 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1218 -testnumber 8 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+#invoke-atomictest T1218 -testnumber 2 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218 -testnumber 6 -Getprereqs -ExecutionLogPath $ExecutionLogPath\
+#invoke-atomictest T1218 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218 -testnumber 7 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218 -testnumber 9 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218 -testnumber 11 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218 -testnumber 12 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218 -testnumber 12 -Cleanup -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1218.011 - Signed Binary Proxy Execution: Rundll32
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1218.011 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218.011 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218.011 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218.011 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218.011 -testnumber 4 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218.011 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218.011 -testnumber 5 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218.011 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218.011 -testnumber 6 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218.011 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218.011 -testnumber 7 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218.011 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218.011 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218.011 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218.011 -testnumber 10 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218.011 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218.011 -testnumber 11 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218.011 -testnumber 11 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218.011 -testnumber 12 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218.011 -testnumber 12 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218.011 -testnumber 13 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218.011 -testnumber 13 -Cleanup -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1222.001 - File and Directory Permissions Modification: Windows File and Directory Permissions Modification
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1222.001 -testnumber 1 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1222.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1222.001 -testnumber 2 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1222.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1222.001 -testnumber 3 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1222.001 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1222.001 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1222.001 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1222.001 -testnumber 5 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1222.001 -testnumber 5 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1222.001 -testnumber 5 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+
+#---------------------------------------------------------------------------------------
+# T1222.002 - File and Directory Permissions Modification: Linux and Mac File and Directory Permissions Modification
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1222.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1222.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1222.002 -testnumber 3 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1222.002 -testnumber 4 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1222.002 -testnumber 5 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1222.002 -testnumber 6 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1222.002 -testnumber 7 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1222.002 -testnumber 8 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1222.002 -testnumber 9 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1222.002 -testnumber 10 -GetPrereqs -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1222.002 -testnumber 10 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1222.002 -testnumber 11 -GetPrereqs -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1222.002 -testnumber 11 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+
+#---------------------------------------------------------------------------------------
+# T1482 - Domain Trust Discovery
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1482 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1482 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1482 -testnumber 3 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1482 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1482 -testnumber 4 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1482 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1482 -testnumber 5 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1482 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1482 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1482 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1482 -testnumber 8 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1482 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1505.002 - Server Software Component: Transport Agent
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1505.002 -testnumber 1 -GetPrereqs -ExecutionLogPath $ExecutionLogPath #Exchange Shell
+#invoke-atomictest T1505.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Exchange Shell
+#invoke-atomictest T1505.002 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath #Exchange Shell
+
+#---------------------------------------------------------------------------------------
+# T1505.003 - Server Software Component: Web Shell
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1505.003 -testnumber 1 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1505.003 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1505.003 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1518 - Software Discovery
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1518 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1518 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1518 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1518 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1518 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1518 -testnumber 3 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+
+
+#---------------------------------------------------------------------------------------
+# T1518.001 - Software Discovery: Security Software Discovery
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1518.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1518.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1518.001 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1518.001 -testnumber 3 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest T1518.001 -testnumber 4 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+
+#---------------------------------------------------------------------------------------
+# T1543.003 - Create or Modify System Process: Windows Service
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1543.003 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1543.003 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1543.003 -testnumber 2 -Getprereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1543.003 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1543.003 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1543.003 -testnumber 3 -Getprereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1543.003 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1543.003 -testnumber 3 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1543.003 -testnumber 4 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1543.003 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+
+#---------------------------------------------------------------------------------------
+# T1546.003 - Create or Modify System Process: Windows Service
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1546.003 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1546.003 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1546.003 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1546.003 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1546.003 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1546.003 -testnumber 3 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+
+#---------------------------------------------------------------------------------------
+# T1546.013 - Event Triggered Execution: PowerShell Profile
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1546.013 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1546.015 - Event Triggered Execution: Component Object Model Hijacking
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1546.015 -testnumber 1 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1546.015 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1546.015 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1546.015 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1546.015 -testnumber 3 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1546.015 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1546.015 -testnumber 3 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1546.015 -testnumber 4 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1546.015 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+
+#---------------------------------------------------------------------------------------
+# T1547 - Boot or Logon Autostart Execution
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1547 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1547.001 - Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1547.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1547.001 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1547.001 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1547.001 -testnumber 7 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1547.001 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1547.001 -testnumber 9 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1547.001 -testnumber 11 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1547.001 -testnumber 11 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1547.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1547.001 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1547.001 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1547.001 -testnumber 3 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1547.001 -testnumber 4 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1547.001 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1547.001 -testnumber 5 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1547.001 -testnumber 5 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1547.001 -testnumber 6 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1547.001 -testnumber 6 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1547.001 -testnumber 8 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1547.001 -testnumber 8 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1547.001 -testnumber 10 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1547.001 -testnumber 10 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1547.001 -testnumber 12 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1547.001 -testnumber 12 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1547.001 -testnumber 13 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1547.001 -testnumber 13 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1547.001 -testnumber 14 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1547.001 -testnumber 14 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1547.001 -testnumber 15 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1547.001 -testnumber 15 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+
+#---------------------------------------------------------------------------------------
+# T1547.004 - Boot or Logon Autostart Execution: Winlogon Helper DLL
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1547.004 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1547.004 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1547.004 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1547.004 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1547.004 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1547.004 -testnumber 3 -Cleanup -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1547.009 - Boot or Logon Autostart Execution: Shortcut Modification
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1547.009 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1547.009 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1547.009 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1547.009 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+
+#---------------------------------------------------------------------------------------
+# T1548.002 - Abuse Elevation Control Mechanism: Bypass User Access Control
+#---------------------------------------------------------------------------------------
+#invoke-atomictest t1548.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath -TimeoutSeconds 1
+#invoke-atomictest t1548.002 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 3 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 7 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 10 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 10 -Cleanup -ExecutionLogPath $ExecutionLogPath #cleanup은 관리자 권한으로 실행해야함
+#invoke-atomictest t1548.002 -testnumber 18 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 19 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 20 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 21 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest t1548.002 -testnumber 5 -ExecutionLogPath $ExecutionLogPath # 관리자 계정
+invoke-atomictest t1548.002 -testnumber 5 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 계정
+invoke-atomictest t1548.002 -testnumber 6 -ExecutionLogPath $ExecutionLogPath # 관리자 계정
+invoke-atomictest t1548.002 -testnumber 6 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 계정
+invoke-atomictest t1548.002 -testnumber 8 -ExecutionLogPath $ExecutionLogPath # 관리자 계정
+invoke-atomictest t1548.002 -testnumber 8 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 계정
+#invoke-atomictest t1548.002 -testnumber 11 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 11 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 11 -Cleanup -ExecutionLogPath $ExecutionLogPath #cleanup은 관리자 권한으로 실행해야함
+#invoke-atomictest t1548.002 -testnumber 12 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 12 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 12 -Cleanup -ExecutionLogPath $ExecutionLogPath #cleanup은 관리자 권한으로 실행해야함
+#invoke-atomictest t1548.002 -testnumber 13 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 13 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 13 -Cleanup -ExecutionLogPath $ExecutionLogPath #cleanup은 관리자 권한으로 실행해야함
+#invoke-atomictest t1548.002 -testnumber 14 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 14 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 14 -Cleanup -ExecutionLogPath $ExecutionLogPath #cleanup은 관리자 권한으로 실행해야함
+#invoke-atomictest t1548.002 -testnumber 15 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 15 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 15 -Cleanup -ExecutionLogPath $ExecutionLogPath #cleanup은 관리자 권한으로 실행해야함
+#invoke-atomictest t1548.002 -testnumber 16 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 16 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 16 -Cleanup -ExecutionLogPath $ExecutionLogPath #cleanup은 관리자 권한으로 실행해야함
+#invoke-atomictest t1548.002 -testnumber 17 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 17 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1548.002 -testnumber 17 -Cleanup -ExecutionLogPath $ExecutionLogPath #cleanup은 관리자 권한으로 실행해야함
