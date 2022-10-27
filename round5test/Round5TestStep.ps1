@@ -1113,14 +1113,14 @@ invoke-atomictest T1547 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 # T1547.001 - Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder
 #---------------------------------------------------------------------------------------
-invoke-atomictest T1547 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1547 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1547 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1547 -testnumber 7 -Cleanup -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1547 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1547 -testnumber 9 -Cleanup -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1547 -testnumber 11 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1547 -testnumber 11 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1547.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1547.001 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1547.001 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1547.001 -testnumber 7 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1547.001 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1547.001 -testnumber 9 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1547.001 -testnumber 11 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1547.001 -testnumber 11 -Cleanup -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1547 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # # 관리자 권한
 # invoke-atomictest T1547 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 # invoke-atomictest T1547 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
