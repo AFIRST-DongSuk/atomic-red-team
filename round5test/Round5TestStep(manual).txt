@@ -14,5 +14,18 @@ Step 4. invoke-atomictest T1003 -testnumber 2 -Cleanup -ExecutionLogPath $Execut
 
 #------------------------------------------------------------
 # T1003.001 - OS Credential Dumping: LSASS Memory
-# Atomic Test 2 - Credential Dumping with NPPSpy
+# Atomic Test 5 - Dump LSASS.exe Memory using Windows Task Manager
 #------------------------------------------------------------
+
+#------------------------------------------------------------
+# T1027 - Obfuscated Files or Information
+# Atomic Test #7 - Obfuscated Command in PowerShell
+#------------------------------------------------------------
+
+#------------------------------------------------------------
+# T1112 - Modify Registry
+# Atomic Test #41 - Terminal Server Client Connection History Cleared
+#------------------------------------------------------------
+Step 1. "Windows 10 PC(192.168.1.10)" -> "Windows Server 2019(192.168.1.100)" RDP 접근 
+Step 2. invoke-atomictest T1112 -testnumber 41 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+Step 3. invoke-atomictest T1112 -testnumber 41 -Cleanup -ExecutionLogPath $ExecutionLogPath  # 관리자 권한
