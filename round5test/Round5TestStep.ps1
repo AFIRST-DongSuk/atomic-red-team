@@ -142,9 +142,9 @@ invoke-atomictest T1016 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 # T1016.001 - System Network Configuration Discovery: Internet Connection Discovery
 #---------------------------------------------------------------------------------------
-invoke-atomictest T1016.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1016.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #tracert 명령어를 이용 외부 네트워크 통신 테스트 → 방화벽 문제?? 발생
-invoke-atomictest T1016.001 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1016.001A -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1016.001A -testnumber 2 -ExecutionLogPath $ExecutionLogPath #tracert 명령어를 이용 외부 네트워크 통신 테스트 → 방화벽 문제?? 발생
+invoke-atomictest T1016.001A -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 
 
