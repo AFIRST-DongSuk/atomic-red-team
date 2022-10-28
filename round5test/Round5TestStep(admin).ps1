@@ -1253,6 +1253,238 @@ invoke-atomictest t1552.001 -testnumber 4 -ExecutionLogPath $ExecutionLogPath # 
 #invoke-atomictest t1552.001 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest t1552.001 -testnumber 11 -ExecutionLogPath $ExecutionLogPath
 
+#---------------------------------------------------------------------------------------
+# T1553.004 - Subvert Trust Controls: Install Root Certificate
+#---------------------------------------------------------------------------------------
+invoke-atomictest t1553.004 -testnumber 4 -getprereq -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest t1553.004 -testnumber 4 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest t1553.004 -testnumber 4 -cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest t1553.004 -testnumber 5 -getprereq -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest t1553.004 -testnumber 5 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest t1553.004 -testnumber 5 -cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest t1553.004 -testnumber 6 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest t1553.004 -testnumber 6 -cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 
+#---------------------------------------------------------------------------------------
+# T1553.006A
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1553.006A -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1553.006A -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 
+#---------------------------------------------------------------------------------------
+# T1555 - Credentials from Password Stores
+#---------------------------------------------------------------------------------------
+#invoke-atomictest t1555 -testnumber 1 -getprereq -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1555 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1555 -testnumber 1 -cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1555 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1555 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1555 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1555 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1555 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1555 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1555 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
 
+#---------------------------------------------------------------------------------------
+# T1555.004 - Credentials from Password Stores: Windows Credential Manager
+#---------------------------------------------------------------------------------------
+#invoke-atomictest t1555.004 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1555.004 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1560 - Archive Collected Data
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1560 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1560 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1560.001 - Archive Collected Data: Archive via Utility
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1560.001 -testnumber 1 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1560.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1560.001 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+
+#---------------------------------------------------------------------------------------
+# T1560.002 - Archive Collected Data: Archive via Library
+#---------------------------------------------------------------------------------------
+#Linux Test
+
+#---------------------------------------------------------------------------------------
+# T1562.001 - Impair Defenses: Disable or Modify Tools
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1562.001 -testnumber 10 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 10 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 10 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 11 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 11 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 11 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+#invoke-atomictest T1562.001 -testnumber 12 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1562.001 -testnumber 12 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1562.001 -testnumber 13 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 13 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 17 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 17 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+#invoke-atomictest T1562.001 -testnumber 18 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1562.001 -testnumber 18 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1562.001 -testnumber 19 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 21 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 25 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 25 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 25 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 27 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 27 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 27 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 28 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 28 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 28 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 29 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 29 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+#invoke-atomictest T1562.001 -testnumber 30 -ExecutionLogPath $ExecutionLogPath 
+invoke-atomictest T1562.001 -testnumber 31 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 32 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 32 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 33 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 33 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 34 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 34 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 35 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 35 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+
+#---------------------------------------------------------------------------------------
+# T1562.002 - Impair Defenses: Disable Windows Event Logging
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1562.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1562.002 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1562.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.002 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.002 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.002 -testnumber 3 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.002 -testnumber 4 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.002 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.002 -testnumber 5 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.002 -testnumber 5 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+#invoke-atomictest T1562.002 -testnumber 6 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1562.002 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1562.002 -testnumber 6 -Cleanup -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1562.006 - Impair Defenses: Indicator Blocking
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1562.006 -testnumber 3 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.006 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.006 -testnumber 3 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.006 -testnumber 4 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.006 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.006 -testnumber 5 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.006 -testnumber 5 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.006 -testnumber 6 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.006 -testnumber 6 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.006 -testnumber 7 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.006 -testnumber 7 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+
+#---------------------------------------------------------------------------------------
+# T1564 - Hide Artifacts
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1564 -testnumber 1 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1564 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1564 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1564 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1564 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1564 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1564 -testnumber 3 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+
+#---------------------------------------------------------------------------------------
+# T1564.001 - Hide Artifacts: Hidden Files and Directories
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1564.001 -testnumber 3 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1564.001 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1564.001 -testnumber 3 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1564.001 -testnumber 4 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1564.001 -testnumber 4 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1564.001 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1564.001 -testnumber 8 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1564.001 -testnumber 8 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+
+#---------------------------------------------------------------------------------------
+# T1564.004 - Hide Artifacts: NTFS File Attributes
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1564.004 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1564.004 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1564.004 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1564.004 -testnumber 3 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1564.004 -testnumber 4 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1564.004 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1564.004 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1566.001 - Phishing: Spearphishing Attachment
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1566.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1566.001 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1566.001 -testnumber 2 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1566.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1566.001 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1569.002 - System Services: Service Execution
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1569.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1569.002 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+#invoke-atomictest T1569.002 -testnumber 2 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1569.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1569.002 -testnumber 4 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1569.002 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+
+#---------------------------------------------------------------------------------------
+# T1571 - Non-Standard Port
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1571 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1573 - Encrypted Channel
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1573 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1574.001 - Hijack Execution Flow: DLL Search Order Hijacking
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1574.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1574.001 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+
+#---------------------------------------------------------------------------------------
+# T1574.007A
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1574.007A -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1574.007A -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+
+#---------------------------------------------------------------------------------------
+# T1574.008 - Hijack Execution Flow: Path Interception by Search Order Hijacking
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1574.008 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1574.008 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1574.009 - Hijack Execution Flow: Path Interception by Unquoted Path
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1574.009 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1574.009 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+
+#---------------------------------------------------------------------------------------
+# T1574.010A 
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1574.010A -testnumber 1 -Getprereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1574.010A -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1574.010A -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+
+#---------------------------------------------------------------------------------------
+# T1574.011 - Hijack Execution Flow: Services Registry Permissions Weakness
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1574.011 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1574.011 -testnumber 2 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1574.011 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1574.011 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+
+#---------------------------------------------------------------------------------------
+# T1614A 
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1614A -testnumber 1 -ExecutionLogPath $ExecutionLogPath
