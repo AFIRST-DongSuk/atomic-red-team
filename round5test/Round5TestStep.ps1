@@ -1190,8 +1190,8 @@ invoke-atomictest t1548.002 -testnumber 20 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 # T1550.002 - Use Alternate Authentication Material: Pass the Hash
 #---------------------------------------------------------------------------------------
-invoke-atomictest t1550.002 -testnumber 1 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest t1550.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath -TimeoutSeconds 30
+invoke-atomictest t1550.002A -testnumber 1 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest t1550.002A -testnumber 1 -ExecutionLogPath $ExecutionLogPath -TimeoutSeconds 30
 #---------------------------------------------------------------------------------------
 
 #---------------------------------------------------------------------------------------
