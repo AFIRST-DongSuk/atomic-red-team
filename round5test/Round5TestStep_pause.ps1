@@ -210,7 +210,7 @@ $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1018 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 timeout /t $sleeptime
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
-invoke-atomictest T1018 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1018 -testnumber 4 -ExecutionLogPath $ExecutionLogPath -TimeoutSeconds 15
 timeout /t $sleeptime
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1018 -testnumber 5 -ExecutionLogPath $ExecutionLogPath

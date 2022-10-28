@@ -153,8 +153,8 @@ invoke-atomictest T1016.001A -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1018 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # net view 명령어 사용 ( Computer Browser 서비스 동작해야 명령어 사용가능)
 invoke-atomictest T1018 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # AD 환경 도메인 연결돼야함.
-invoke-atomictest T1018 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1018 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1018 -testnumber 3 -ExecutionLogPath $ExecutionLogPath 
+invoke-atomictest T1018 -testnumber 4 -ExecutionLogPath $ExecutionLogPath -TimeoutSeconds 15
 invoke-atomictest T1018 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1018 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1018 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
