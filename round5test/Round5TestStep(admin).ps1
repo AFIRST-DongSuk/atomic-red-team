@@ -1227,3 +1227,32 @@ invoke-atomictest t1548.002 -testnumber 8 -Cleanup -ExecutionLogPath $ExecutionL
 #invoke-atomictest t1548.002 -testnumber 17 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest t1548.002 -testnumber 17 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest t1548.002 -testnumber 17 -Cleanup -ExecutionLogPath $ExecutionLogPath #cleanup은 관리자 권한으로 실행해야함
+
+#---------------------------------------------------------------------------------------
+# T1550.002 - Use Alternate Authentication Material: Pass the Hash
+#---------------------------------------------------------------------------------------
+#invoke-atomictest t1550.002 -testnumber 1 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1550.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath -TimeoutSeconds 30
+#invoke-atomictest t1550.002 -testnumber 2 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1550.002 -testnumber 2  -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1550.002 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1552.001 - Unsecured Credentials: Credentials In Files
+#---------------------------------------------------------------------------------------
+#invoke-atomictest t1552.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest t1552.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+invoke-atomictest t1552.001 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest t1552.001 -testnumber 4 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+#invoke-atomictest t1552.001 -testnumber 5 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+#invoke-atomictest t1552.001 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1552.001 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1552.001 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1552.001 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1552.001 -testnumber 9 -cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1552.001 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1552.001 -testnumber 11 -ExecutionLogPath $ExecutionLogPath
+
+
+
+
