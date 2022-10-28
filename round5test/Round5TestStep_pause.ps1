@@ -15,7 +15,6 @@ $sleeptime = 10
 #---------------------------------------------------------------------------------------
 # T1003 - OS Credential Dumping
 #---------------------------------------------------------------------------------------
-write-host "T1003 Process Start, Press Any Key to Continue";read-host
 #invoke-atomictest T1003 -testnumber 1 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1003 -testnumber 1 -ExecutionLogPath $ExecutionLogPath 
 #invoke-atomictest T1003 -testnumber 2 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
@@ -28,7 +27,6 @@ write-host "T1003 Process Start, Press Any Key to Continue";read-host
 #---------------------------------------------------------------------------------------
 # T1003.001 - OS Credential Dumping: LSASS Memory
 #---------------------------------------------------------------------------------------
-write-host "T1003.001 Process Start, Press Any Key to Continue";read-host
 # invoke-atomictest T1003.001 -testnumber 1 -GetPrereqs -ExecutionLogPath $ExecutionLogPath #관리자권한
 # invoke-atomictest T1003.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #관리자권한
 # invoke-atomictest T1003.001 -testnumber 2 -GetPrereqs -ExecutionLogPath $ExecutionLogPath #관리자권한
@@ -64,7 +62,6 @@ write-host "T1003.001 Process Start, Press Any Key to Continue";read-host
 #---------------------------------------------------------------------------------------
 # T1003.003 - OS Credential Dumping: NTDS
 #---------------------------------------------------------------------------------------
-write-host "T1003.003 Process Start, Press Any Key to Continue";read-host
 # invoke-atomictest T1003.003 -testnumber 1 -GetPrereqs -ExecutionLogPath $ExecutionLogPath  #AD에서 실행, 관리자 권한
 # invoke-atomictest T1003.003 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #AD에서 실행, 관리자 권한
 # invoke-atomictest T1003.003 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath #AD에서 실행, 관리자 권한
@@ -387,7 +384,6 @@ timeout /t $sleeptime
 #---------------------------------------------------------------------------------------
 # T1036.004 - Masquerading: Masquerade Task or Service
 #---------------------------------------------------------------------------------------
-write-host "T1036.004 Process Start, Press Any Key to Continue";read-host
 # invoke-atomictest T1036.004 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 # invoke-atomictest T1036.004 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 # invoke-atomictest T1036.004 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #관리자 권한
