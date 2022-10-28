@@ -21,47 +21,83 @@ $sleeptime = 10
 write-host "T1003.001 Process Start, Press Any Key to Continue";read-host
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 1 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 2 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 3 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 3 -Cleanup -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 4 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 # invoke-atomictest T1003.001 -testnumber 5 -ExecutionLogPath $ExecutionLogPath #GUI 테스트 #manual테스트
 invoke-atomictest T1003.001 -testnumber 6 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 6 -ExecutionLogPath $ExecutionLogPathinvoke-atomictest T1003.001 -testnumber 7 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 8 -ExecutionLogPath $ExecutionLogPath 
+timeout /t $sleeptime
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 8 -Cleanup -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 9 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 9 -Cleanup -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 11 -GetPrereqs -ExecutionLogPath $ExecutionLogPath #.net5 설치 필요
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 11 -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 11 -Cleanup -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 12 -GetPrereqs -ExecutionLogPath $ExecutionLogPath 
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 12 -ExecutionLogPath $ExecutionLogPath #실행시 에러발생하나 실행은 완료됨.
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 12 -Cleanup -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
 
 #------------------------------------------------------------
 # credential-access - OS Credential Dumping(T1003) T1003.003 - NTDS
@@ -131,15 +167,19 @@ invoke-atomictest T1003.001 -testnumber 12 -Cleanup -ExecutionLogPath $Execution
 
 #------------------------------------------------------------
 # discovery - Remote System Discovery(T1018)
-
+write-host "T1018 Process Start, Press Any Key to Continue";read-host
 #invoke-atomictest T1018 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1018 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1018 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1018 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1018 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1018 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1018 -testnumber 9 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1018 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
 #invoke-atomictest T1018 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1018 -testnumber 11 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1018 -testnumber 15 -ExecutionLogPath $ExecutionLogPath
@@ -154,11 +194,15 @@ invoke-atomictest T1018 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
 
 #------------------------------------------------------------
 # lateral-movement - Remote Services(T1021) T1021.001 - SMB/Windows Admin Shares
-
+write-host "T1021.002 Process Start, Press Any Key to Continue";read-host
 #invoke-atomictest T1021.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1021.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1021.002 -testnumber 3 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1021.002 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
 #invoke-atomictest T1021.002 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
 
 #------------------------------------------------------------
@@ -177,8 +221,10 @@ invoke-atomictest T1021.002 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 
 #------------------------------------------------------------
 # lateral-movement - Remote Services(T1021) T1021.006 - Windows Remote Management
-
+write-host "T1021.006 Process Start, Press Any Key to Continue";read-host
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1021.006 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
 #invoke-atomictest T1021.006 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 
 #------------------------------------------------------------
@@ -246,11 +292,19 @@ invoke-atomictest T1021.006 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 
 #------------------------------------------------------------
 # defense-evasion - Masquerading(T1036) T1036.004 - Masquerade Task or Service
-
+write-host "T1036.004 Process Start, Press Any Key to Continue";read-host
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1036.004 -testnumber 1 -ExecutionLogPath $ExecutionLogPath 
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1036.004 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1036.004 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1036.004 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPathinvoke
+timeout /t $sleeptime
 
 #------------------------------------------------------------
 # defense-evasion - Masquerading(T1036) T1036.005 - Match Legitimate Name or Location
@@ -273,16 +327,28 @@ invoke-atomictest T1036.004 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionL
 
  #------------------------------------------------------------
  # credential-access - Network Sniffing(T1040)
-
+write-host "T1040 Process Start, Press Any Key to Continue";read-host
 #invoke-atomictest T1040 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
 #invoke-atomictest T1040 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
 #invoke-atomictest T1040 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1040 -testnumber 4 -ExecutionLogPath $ExecutionLogPath 
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
+invoke-atomictest T1040 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1040 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath 
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1040 -testnumber 5 -ExecutionLogPath $ExecutionLogPath 
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1040 -testnumber 5 -Cleanup -ExecutionLogPath $ExecutionLogPath 
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1040 -testnumber 6 -ExecutionLogPath $ExecutionLogPath 
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1040 -testnumber 6 -Cleanup -ExecutionLogPath $ExecutionLogPath 
+timeout /t $sleeptime
 
  #------------------------------------------------------------
  # exfiltration - Exfiltration Over C2 Channel(T1041)
@@ -291,7 +357,7 @@ invoke-atomictest T1040 -testnumber 6 -Cleanup -ExecutionLogPath $ExecutionLogPa
 
  #------------------------------------------------------------
  # exfiltration - Windows Management Instrumentation(T1047)
- 
+ write-host "T1047 Process Start, Press Any Key to Continue";read-host
 #invoke-atomictest T1047 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1047 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1047 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
@@ -301,14 +367,24 @@ invoke-atomictest T1040 -testnumber 6 -Cleanup -ExecutionLogPath $ExecutionLogPa
 #invoke-atomictest T1047 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1047 -testnumber 6 -Cleanup -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1047 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1047 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1047 -testnumber 8 -Cleanup -ExecutionLogPath $ExecutionLogPath 
+timeout /t $sleeptime
 #invoke-atomictest T1047 -testnumber 9 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1047 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1047 -testnumber 9 -Cleanup -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1047 -testnumber 10 -Getprereqs -ExecutionLogPath $ExecutionLogPath 
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
+invoke-atomictest T1047 -testnumber 10 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime 
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1047 -testnumber 10 -ExecutionLogPath $ExecutionLogPath 
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1047 -testnumber 10 -Cleanup -ExecutionLogPath $ExecutionLogPath 
+timeout /t $sleeptime
 
 #------------------------------------------------------------
 # exfiltration - Exfiltration Over Alternative Protocol(T1048)
@@ -320,8 +396,10 @@ invoke-atomictest T1047 -testnumber 10 -Cleanup -ExecutionLogPath $ExecutionLogP
 
 #------------------------------------------------------------
 # discovery - System Network Connections Discovery(T1049)
-
+write-host "T1049 Process Start, Press Any Key to Continue";read-host
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1049 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #관리자 권한
+timeout /t $sleeptime
 #invoke-atomictest T1049 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1049 -testnumber 3 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
 #invoke-atomictest T1049 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
@@ -336,11 +414,13 @@ invoke-atomictest T1049 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #관�
 
 #------------------------------------------------------------
 # discovery - Scheduled Task/Job(T1053) T1053.005 - Scheduled Task
-
-#일반 권한 계정
-
+write-host "T1053.005 Process Start, Press Any Key to Continue";read-host
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1053.005 -testnumber 1 -ExecutionLogPath $ExecutionLogPath  # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1053.005 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
 #invoke-atomictest T1053.005 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1053.005 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1053.005 -testnumber 5 -Getprereqs -ExecutionLogPath $ExecutionLogPath
@@ -348,31 +428,61 @@ invoke-atomictest T1053.005 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionL
 #invoke-atomictest T1053.005 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1053.005 -testnumber 7 -Cleanup -ExecutionLogPath $ExecutionLogPath
 
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1053.005 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1053.005 -testnumber 3 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1053.005 -testnumber 4 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1053.005 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1053.005 -testnumber 6 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1053.005 -testnumber 6 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1053.005 -testnumber 8 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1053.005 -testnumber 8 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1053.005 -testnumber 9 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1053.005 -testnumber 9 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
 
 #------------------------------------------------------------
 # defense-evasion - Process Injection(T1055)
-
+write-host "T1055 Process Start, Press Any Key to Continue";read-host
 #invoke-atomictest T1055 -testnumber 1 -Getprereqs -ExecutionLogPath $ExecutionLogPath
-#invoke-atomictest T1055 -testnumber 1 -ExecutionLogPath $ExecutionLogPath 
+#invoke-atomictest T1055 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss") 
 invoke-atomictest T1055 -testnumber 2 -Getprereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1055 -testnumber 2 -ExecutionLogPath $ExecutionLogPath  # 관리자 권한
+timeout /t $sleeptime
 
 #------------------------------------------------------------
 # defense-evasion - Process Injection(T1055) T1055.001 - Dynamic-link Library Injection
-
-invoke-atomictest T1055.001 -testnumber 1 -Getprereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+write-host "T1055.001 Process Start, Press Any Key to Continue";read-host
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
+invoke-atomictest T1055.001 -testnumber 1 -Getprereqs -1ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1055.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1055.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
 
 #------------------------------------------------------------
 # collection - Input Capture(T1056) T1056.001 - Keylogging
@@ -392,15 +502,25 @@ invoke-atomictest T1055.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # 
 #---------------------------------------------------------------------------------------
 # T1018 - Remote System Discovery
 #---------------------------------------------------------------------------------------
+write-host "T1057 Process Start, Press Any Key to Continue";read-host
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1057 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1057 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1057 -testnumber 4 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1057 -testnumber 5 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
 #invoke-atomictest T1057 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
 
 #---------------------------------------------------------------------------------------
 # T1059.001 - Command and Scripting Interpreter: PowerShell
 #---------------------------------------------------------------------------------------
+write-host "T1059.001 Process Start, Press Any Key to Continue";read-host
 #invoke-atomictest T1059.001 -testnumber 2 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1059.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1059.001 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath
@@ -430,10 +550,18 @@ invoke-atomictest T1057 -testnumber 5 -ExecutionLogPath $ExecutionLogPath # 관�
 #invoke-atomictest T1059.001 -testnumber 19 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1059.001 -testnumber 20 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1059.001 -testnumber 21 -ExecutionLogPath $ExecutionLogPath
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1059.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1059.001 -testnumber 5 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1059.001 -testnumber 14 -Getprereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1059.001 -testnumber 14 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
 #invoke-atomictest T1059.001 -testnumber 10 -ExecutionLogPath $ExecutionLogPath # 수동 실행
 #invoke-atomictest T1059.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
 
@@ -489,6 +617,7 @@ invoke-atomictest T1059.001 -testnumber 14 -ExecutionLogPath $ExecutionLogPath #
 #---------------------------------------------------------------------------------------
 # T1069.002 - Permission Groups Discovery: Domain Groups
 #---------------------------------------------------------------------------------------
+write-host "T1069.002 Process Start, Press Any Key to Continue";read-host
 #invoke-atomictest T1069.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1069.002 -testnumber 5 -ExecutionLogPath $ExecutionLogPath 
 #invoke-atomictest T1069.002 -testnumber 6 -ExecutionLogPath $ExecutionLogPath 
@@ -499,23 +628,41 @@ invoke-atomictest T1059.001 -testnumber 14 -ExecutionLogPath $ExecutionLogPath #
 #invoke-atomictest T1069.002 -testnumber 11 -ExecutionLogPath $ExecutionLogPath 
 #invoke-atomictest T1069.002 -testnumber 12 -ExecutionLogPath $ExecutionLogPath 
 #invoke-atomictest T1069.002 -testnumber 13 -ExecutionLogPath $ExecutionLogPath 
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1069.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1069.002 -testnumber 4 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1069.002 -testnumber 7 -Getprereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1069.002 -testnumber 7 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
 #invoke-atomictest T1069.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
 
 #---------------------------------------------------------------------------------------
 # T1070 - Indicator Removal on Host
 #---------------------------------------------------------------------------------------
+write-host "T1070 Process Start, Press Any Key to Continue";read-host
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1070 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
 
 #---------------------------------------------------------------------------------------
 # T1070.001 - Indicator Removal on Host: Clear Windows Event Logs
 #---------------------------------------------------------------------------------------
+write-host "T1070.001 Process Start, Press Any Key to Continue";read-host
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1070.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1070.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1070.001 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
 
 #---------------------------------------------------------------------------------------
 # T1070.002 - Indicator Removal on Host: Clear Linux or Mac System Logs
@@ -545,6 +692,7 @@ invoke-atomictest T1070.001 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 
 #---------------------------------------------------------------------------------------
 # T1070.004 - Indicator Removal on Host: File Deletion
 #---------------------------------------------------------------------------------------
+write-host "T1070.004 Process Start, Press Any Key to Continue";read-host
 #invoke-atomictest T1070.004 -testnumber 4 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1070.004 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1070.004 -testnumber 5 -Getprereqs -ExecutionLogPath $ExecutionLogPath
@@ -554,7 +702,9 @@ invoke-atomictest T1070.001 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 
 #invoke-atomictest T1070.004 -testnumber 7 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1070.004 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1070.004 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1070.004 -testnumber 9 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
 #invoke-atomictest T1070.004 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
 #invoke-atomictest T1070.004 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
 #invoke-atomictest T1070.004 -testnumber 3 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
@@ -580,23 +730,42 @@ invoke-atomictest T1070.004 -testnumber 9 -ExecutionLogPath $ExecutionLogPath # 
 #---------------------------------------------------------------------------------------
 # T1078.001 - Valid Accounts: Default Accounts
 #---------------------------------------------------------------------------------------
+write-host "T1078.001 Process Start, Press Any Key to Continue";read-host
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1078.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1078.001 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1078.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1078.001 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
 
 #---------------------------------------------------------------------------------------
 # T1078.003 - Valid Accounts: Local Accounts
 #---------------------------------------------------------------------------------------
+write-host "T1078.003 Process Start, Press Any Key to Continue";read-host
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1078.003 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1078.003 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1078.003 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1078.003 -testnumber 4 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
-invoke-atomictest T1078.003 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+timeout /t $sleeptime
+# invoke-atomictest T1078.003 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
 
 #---------------------------------------------------------------------------------------
 # T1082 - System Information Discovery
 #---------------------------------------------------------------------------------------
+write-host "T1082 Process Start, Press Any Key to Continue";read-host
 #invoke-atomictest T1082 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1082 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1082 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
@@ -610,8 +779,12 @@ invoke-atomictest T1078.003 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #L
 #invoke-atomictest T1082 -testnumber 18 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1082 -testnumber 19 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1082 -testnumber 20 -ExecutionLogPath $ExecutionLogPath
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1082 -testnumber 21 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1082 -testnumber 22 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
 #invoke-atomictest T1082 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
 #invoke-atomictest T1082 -testnumber 3 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
 #invoke-atomictest T1082 -testnumber 4 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
@@ -678,8 +851,13 @@ invoke-atomictest T1082 -testnumber 22 -ExecutionLogPath $ExecutionLogPath # 관
 #---------------------------------------------------------------------------------------
 # T1090.001 - Proxy: Internal Proxy
 #---------------------------------------------------------------------------------------
+write-host "T1090.001 Process Start, Press Any Key to Continue";read-host
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1090.001 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1090.001 -testnumber 3 -Getprereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
 #invoke-atomictest T1090.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
 #invoke-atomictest T1090.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
 
@@ -693,6 +871,7 @@ invoke-atomictest T1090.001 -testnumber 3 -Getprereqs -ExecutionLogPath $Executi
 #---------------------------------------------------------------------------------------
 # T1105 - Ingress Tool Transfer
 #---------------------------------------------------------------------------------------
+write-host "T1105 Process Start, Press Any Key to Continue";read-host
 #invoke-atomictest T1105 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
 #invoke-atomictest T1105 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
 #invoke-atomictest T1105 -testnumber 3 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
@@ -738,18 +917,31 @@ invoke-atomictest T1090.001 -testnumber 3 -Getprereqs -ExecutionLogPath $Executi
 #invoke-atomictest T1105 -testnumber 28 -Cleanup -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1105 -testnumber 29 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1105 -testnumber 29 -Cleanup -ExecutionLogPath $ExecutionLogPath
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1105 -testnumber 11 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1105 -testnumber 12 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1105 -testnumber 12 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
 
 #---------------------------------------------------------------------------------------
 # T1106 - Native API
 #---------------------------------------------------------------------------------------
+write-host "T1106 Process Start, Press Any Key to Continue";read-host
 #invoke-atomictest T1106 -testnumber 1 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1106 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1106 -testnumber 2 -ExecutionLogpath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1106 -testnumber 3 -ExecutionLogpath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1106 -testnumber 4 -ExecutionLogpath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
 
 #---------------------------------------------------------------------------------------
 # T1110.003 - Brute Force: Password Spraying
@@ -766,92 +958,253 @@ invoke-atomictest T1106 -testnumber 4 -ExecutionLogpath $ExecutionLogPath # 관�
 #---------------------------------------------------------------------------------------
 # T1112 - Brute Force: Password Spraying
 #---------------------------------------------------------------------------------------
+write-host "T1112 Process Start, Press Any Key to Continue";read-host
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 3 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
 #invoke-atomictest T1112 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1112 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1112 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1112 -testnumber 5 -Cleanup -ExecutionLogPath $ExecutionLogPath
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 6 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 6 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 7 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 7 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 8 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 8 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 9 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 9 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 10 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 10 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 11 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 11 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 12 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 12 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 13 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 13 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 14 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 14 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 15 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 15 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 16 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 16 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 17 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 17 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 18 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 18 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 19 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 19 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 20 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 20 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 21 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 21 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 22 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 22 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 23 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 23 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 24 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 24 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 25 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 25 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 26 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 26 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 27 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 27 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 28 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 28 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 29 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 29 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 30 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 30 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 31 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 31 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 32 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 32 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 33 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 33 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 34 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 34 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 35 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 35 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 36 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 36 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 37 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 37 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 38 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 38 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 39 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 39 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 40 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 40 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+timeout /t $sleeptime
 #invoke-atomictest T1112 -testnumber 41 -ExecutionLogPath $ExecutionLogPath # 관리자 권한 # manual
 #invoke-atomictest T1112 -testnumber 41 -Cleanup -ExecutionLogPath $ExecutionLogPath  # 관리자 권한 # manual
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 42 -ExecutionLogPath $ExecutionLogPath  # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 42 -Cleanup -ExecutionLogPath $ExecutionLogPath  # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 43 -ExecutionLogPath $ExecutionLogPath  # 관리자 권한
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 43 -Cleanup -ExecutionLogPath $ExecutionLogPath  # 관리자 권한
+timeout /t $sleeptime
 
 #---------------------------------------------------------------------------------------
 # T1119 - Automated Collection
