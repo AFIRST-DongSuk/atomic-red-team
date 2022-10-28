@@ -1,6 +1,5 @@
-
-$PSDefaultParameterValues = @{"Invoke-AtomicTest:PathToAtomicsFolder"="c:\round4test\atomics"}
-$ExecutionLogPath = "C:\round4test\atomictest.log"
+$PSDefaultParameterValues = @{"Invoke-AtomicTest:PathToAtomicsFolder"="C:\atomic-red-team\atomics"}
+$ExecutionLogPath = "C:\atomic-red-team\atomictest.log"
 Import-Module "C:\round4test\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" -Force
 
 #---------------------------------------------------------------------------------------
