@@ -249,7 +249,7 @@ $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1020 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 timeout /t $sleeptime
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
-invoke-atomictest T1020 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1020 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
 timeout /t $sleeptime
 #---------------------------------------------------------------------------------------
 
@@ -265,10 +265,10 @@ timeout /t $sleeptime
 #---------------------------------------------------------------------------------------
 write-host "T1021.002 Process Start, Press Any Key to Continue";read-host
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
-invoke-atomictest T1021.002A -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1021.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 timeout /t $sleeptime
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
-invoke-atomictest T1021.002A -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1021.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 timeout /t $sleeptime
 # invoke-atomictest T1021.002 -testnumber 3 -Getprereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 # invoke-atomictest T1021.002 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
@@ -506,6 +506,9 @@ timeout /t $sleeptime
 write-host "T1049 Process Start, Press Any Key to Continue";read-host
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1049 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
+invoke-atomictest T1049 -testnumber 4 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 timeout /t $sleeptime
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1049 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
