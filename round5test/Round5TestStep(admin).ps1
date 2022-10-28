@@ -10,9 +10,6 @@ Import-Module "C:\round4test\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" -Fo
 
 #------------------------------------------------------------
 # credential-access	- OS Credential Dumping(T1003)
-
-invoke-atomictest T1003 -testnumber 1 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1003 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1003 -testnumber 2 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1003 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #로그아웃 후 파일 생성
 invoke-atomictest T1003 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath
