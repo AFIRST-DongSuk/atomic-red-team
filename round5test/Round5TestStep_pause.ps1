@@ -5,6 +5,7 @@ Import-Module "C:\round4test\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" -Fo
 Stop-Transcript
 Start-Transcript "C:\round4test\Round5TestStep(admin)_pause.ps1.log"
 
+$sleeptime = 10
 #---------------------------------------------------------------------------------------
 # T1001.002 Data Obfuscation: Steganography
 #---------------------------------------------------------------------------------------
