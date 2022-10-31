@@ -306,8 +306,9 @@ invoke-atomictest T1047 -testnumber 10 -Cleanup -ExecutionLogPath $ExecutionLogP
 invoke-atomictest T1049 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #관리자 권한
 #invoke-atomictest T1049 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1049 -testnumber 3 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
-#invoke-atomictest T1049 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
-#invoke-atomictest T1049 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1049 -testnumber 4 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1049 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1049 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath
 
 #------------------------------------------------------------
 # discovery - Scheduled Task/Job(T1053) T1053.003 - Cron
