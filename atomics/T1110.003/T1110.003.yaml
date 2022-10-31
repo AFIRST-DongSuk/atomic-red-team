@@ -63,7 +63,7 @@ atomic_tests:
     password:
       description: single password we will attempt to auth with (if you need several passwords, then it is a bruteforce so see T1110.001)
       type: String
-      default: P@ssw0rd!
+      default: Password123!
     domain:
       description: Domain FQDN
       type: String
