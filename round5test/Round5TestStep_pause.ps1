@@ -3,7 +3,7 @@ $ExecutionLogPath = "C:\atomic-red-team\atomictest.log"
 Import-Module "C:\round4test\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" -Force
 
 Stop-Transcript
-Start-Transcript "C:\round4test\Round5TestStep(admin)_pause.ps1.log"
+Start-Transcript "C:\round4test\Round5TestStep_pause.ps1.log"
 
 $sleeptime = 10
 #---------------------------------------------------------------------------------------
@@ -279,7 +279,7 @@ timeout /t $sleeptime
 #---------------------------------------------------------------------------------------
 # T1021.004 Remote Services: SSH
 #---------------------------------------------------------------------------------------
-write-host "T1021.004 Process Start, Press Any Key to Continue";read-host
+write-host "T1021.004A Process Start, Press Any Key to Continue";read-host
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1021.004A -testnumber 1 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 timeout /t $sleeptime
