@@ -398,8 +398,9 @@ invoke-atomictest T1049 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #관�
 timeout /t $sleeptime
 #invoke-atomictest T1049 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1049 -testnumber 3 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
-#invoke-atomictest T1049 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
-#invoke-atomictest T1049 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1049 -testnumber 4 -Getprereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1049 -testnumber 4 -ExecutionLogPath $ExecutionLogPath# 관리자 권한
+invoke-atomictest T1049 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath# 관리자 권한
 
 #------------------------------------------------------------
 # discovery - Scheduled Task/Job(T1053) T1053.003 - Cron

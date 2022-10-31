@@ -19,7 +19,7 @@ atomic_tests:
     password:
       description: The password to try for each user in users.txt
       type: String
-      default: Spring2020
+      default: At0micStrong
   dependencies:
   - description: |
       List of domain users to password spray must exits at %temp%\users.txt
