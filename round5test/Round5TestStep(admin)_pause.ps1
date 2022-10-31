@@ -19,9 +19,6 @@ $sleeptime = 10
 # credential-access - OS Credential Dumping(T1003) T1003.001 - LSASS Memory
 write-host "T1003.001 Process Start, Press Any Key to Continue";read-host
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
-invoke-atomictest T1003.001 -testnumber 1 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
-timeout /t $sleeptime
-$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 timeout /t $sleeptime
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
@@ -56,7 +53,7 @@ $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 6 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
 timeout /t $sleeptime
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
-invoke-atomictest T1003.001 -testnumber 6 -ExecutionLogPath $ExecutionLogPathinvoke-atomictest T1003.001 -testnumber 7 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1003.001 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
 timeout /t $sleeptime
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1003.001 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
@@ -1190,8 +1187,8 @@ timeout /t $sleeptime
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 40 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 timeout /t $sleeptime
-#invoke-atomictest T1112 -testnumber 41 -ExecutionLogPath $ExecutionLogPath # 관리자 권한 # manual
-#invoke-atomictest T1112 -testnumber 41 -Cleanup -ExecutionLogPath $ExecutionLogPath  # 관리자 권한 # manual
+invoke-atomictest T1112 -testnumber 41 -ExecutionLogPath $ExecutionLogPath # 관리자 권한 # manual
+invoke-atomictest T1112 -testnumber 41 -Cleanup -ExecutionLogPath $ExecutionLogPath  # 관리자 권한 # manual
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 42 -ExecutionLogPath $ExecutionLogPath  # 관리자 권한
 timeout /t $sleeptime
@@ -2164,6 +2161,7 @@ write-host "T1774.009 Process Start, Press Any Key to Continue";read-host
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1574.009 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 timeout /t $sleeptime
+
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1574.009 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 timeout /t $sleeptime
