@@ -332,9 +332,10 @@ invoke-atomictest T1047 -testnumber 9 -Cleanup -ExecutionLogPath $ExecutionLogPa
 #---------------------------------------------------------------------------------------
 # T1049 - System Network Connections Discovery
 #---------------------------------------------------------------------------------------
-invoke-atomictest T1049 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1049 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1049 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath
+
+# invoke-atomictest T1049 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+# invoke-atomictest T1049 -testnumber 4 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+# invoke-atomictest T1049 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 
 # invoke-atomictest T1049 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 #---------------------------------------------------------------------------------------
