@@ -988,10 +988,10 @@ invoke-atomictest T1218.011 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1218.011 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1218.011 -testnumber 5 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1218.011 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1218.011 -testnumber 6 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1218.011 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1218.011 -testnumber 7 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1218.011 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218.011 -testnumber 6 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218.011 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218.011 -testnumber 7 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1218.011 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1218.011 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1218.011 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1218.011 -testnumber 10 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
