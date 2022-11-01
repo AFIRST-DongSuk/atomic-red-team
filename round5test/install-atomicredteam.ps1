@@ -72,7 +72,8 @@ function Install-AtomicRedTeam {
             }
             if (-not (Test-Path $InstallPath)) { New-Item -ItemType directory -Path $InstallPath | Out-Null }
 
-            $url = "https://github.com/$RepoOwner/invoke-atomicredteam/archive/$Branch.zip"
+            #$url = "https://github.com/$RepoOwner/invoke-atomicredteam/archive/$Branch.zip"
+            $url = "https://github.com/$RepoOwner/atomic-red-team/archive/refs/heads/$Branch.zip"
             $path = Join-Path $DownloadPath "$Branch.zip"
             [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
             write-verbose "Beginning download from Github"
