@@ -1,8 +1,8 @@
-$PSDefaultParameterValues = @{"Invoke-AtomicTest:PathToAtomicsFolder"="C:\atomic-red-team\atomics"}
-$ExecutionLogPath = "C:\atomic-red-team\atomictest.log"
+$PSDefaultParameterValues = @{"Invoke-AtomicTest:PathToAtomicsFolder"="C:\r5\atomic-red-team\atomics"}
+$ExecutionLogPath = "C:\r5\atomic-red-team\atomictest.log"
 Import-Module "C:\round4test\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" -Force
 
-Start-Transcript "C:\atomic-red-team\Result.log"
+Start-Transcript "C:\r5\atomic-red-team\Result.log"
 #---------------------------------------------------------------------------------------
 # T1001.002 Data Obfuscation: Steganography
 #---------------------------------------------------------------------------------------
