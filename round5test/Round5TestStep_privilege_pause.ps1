@@ -1922,9 +1922,10 @@ ping -n $sleeptime 127.0.0.1
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1562.001 -testnumber 29 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 ping -n $sleeptime 127.0.0.1
-#invoke-atomictest T1562.001 -testnumber 30 -ExecutionLogPath $ExecutionLogPath 
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
-invoke-atomictest T1562.001 -testnumber 31 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1562.001 -testnumber 30 -ExecutionLogPath $ExecutionLogPath 
+#$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
+#invoke-atomictest T1562.001 -testnumber 31 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 ping -n $sleeptime 127.0.0.1
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1562.001 -testnumber 32 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
