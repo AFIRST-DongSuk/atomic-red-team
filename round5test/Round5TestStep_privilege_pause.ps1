@@ -1,7 +1,7 @@
 # 이 스크립트는 Round5TestStep.ps1 실행 전에 관리자 권한으로 먼저 수행해야 함
  
 $PSDefaultParameterValues = @{"Invoke-AtomicTest:PathToAtomicsFolder"="C:\r5\atomic-red-team\atomics"}
-$ExecutionLogPath = "C:\r5\atomic-red-team\atomictest(admin).log"
+$ExecutionLogPath = "C:\r5\atomic-red-team\atomictest(admin)_pause.log"
 $isAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).isInRole([Security.Principal.WindowsBuiltinRole]::Administrator) # 관리자 권한 확인
 
 
@@ -1898,15 +1898,15 @@ ping -n $sleeptime 127.0.0.1
 #invoke-atomictest T1562.001 -testnumber 25 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 #invoke-atomictest T1562.001 -testnumber 25 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 #invoke-atomictest T1562.001 -testnumber 25 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
-$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
-invoke-atomictest T1562.001 -testnumber 27 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
-ping -n $sleeptime 127.0.0.1
-$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
-invoke-atomictest T1562.001 -testnumber 27 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
-ping -n $sleeptime 127.0.0.1
-$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
-invoke-atomictest T1562.001 -testnumber 27 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
-ping -n $sleeptime 127.0.0.1
+#$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
+#invoke-atomictest T1562.001 -testnumber 27 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+#ping -n $sleeptime 127.0.0.1
+#$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
+#invoke-atomictest T1562.001 -testnumber 27 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+#ping -n $sleeptime 127.0.0.1
+#$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
+#invoke-atomictest T1562.001 -testnumber 27 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+#ping -n $sleeptime 127.0.0.1
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1562.001 -testnumber 28 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 ping -n $sleeptime 127.0.0.1

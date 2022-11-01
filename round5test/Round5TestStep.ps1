@@ -369,8 +369,8 @@ invoke-atomictest T1053.005 -testnumber 7 -Cleanup -ExecutionLogPath $ExecutionL
 #---------------------------------------------------------------------------------------
 # T1055 - Process Injection
 #---------------------------------------------------------------------------------------
-invoke-atomictest T1055 -testnumber 1 -Getprereqs -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1055 -testnumber 1 -ExecutionLogPath $ExecutionLogPath 
+# invoke-atomictest T1055 -testnumber 1 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1055 -testnumber 1 -ExecutionLogPath $ExecutionLogPath 
 # invoke-atomictest T1055 -testnumber 2 -Getprereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 # invoke-atomictest T1055 -testnumber 2 -ExecutionLogPath $ExecutionLogPath  # 관리자 권한
 #---------------------------------------------------------------------------------------
@@ -585,7 +585,7 @@ invoke-atomictest T1074.001 -testnumber 3 -Cleanup -ExecutionLogPath $ExecutionL
 # T1082 - System Information Discovery
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1082 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1082 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1082 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1082 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1082 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1082 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
@@ -596,7 +596,7 @@ invoke-atomictest T1082 -testnumber 16 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1082 -testnumber 17 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1082 -testnumber 18 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1082 -testnumber 19 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1082 -testnumber 20 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1082 -testnumber 20 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1082 -testnumber 21 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 # invoke-atomictest T1082 -testnumber 22 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 #---------------------------------------------------------------------------------------
