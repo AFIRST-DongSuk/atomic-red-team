@@ -1481,7 +1481,7 @@ invoke-atomictest T1574.011 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 # T1614 - System Location Discovery
 #---------------------------------------------------------------------------------------
-invoke-atomictest T1614 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1614A -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 
 
