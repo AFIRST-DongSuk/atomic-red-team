@@ -1,12 +1,13 @@
 # 이 스크립트는 Round5TestStep.ps1 실행 전에 관리자 권한으로 먼저 수행해야 함
  
-$PSDefaultParameterValues = @{"Invoke-AtomicTest:PathToAtomicsFolder"="C:\r5\atomic-red-team\atomics"}
-$ExecutionLogPath = "C:\r5\atomic-red-team\atomictest(admin)_pause.log"
+$
+$PSDefaultParameterValues = @{"Invoke-AtomicTest:PathToAtomicsFolder"="c:\round5test\atomics"}
+$ExecutionLogPath = "c:\round5test\atomictest(admin)_pause.log"
 $isAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).isInRole([Security.Principal.WindowsBuiltinRole]::Administrator) # 관리자 권한 확인
 
 
-Import-Module "C:\r5\atomic-red-team\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" -Force
-Start-Transcript "C:\r5\atomic-red-team\Round5TestStep(admin)_pause.ps1.log"
+Import-Module "c:\round5test\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" -Force
+Start-Transcript "c:\round5test\Round5TestStep(admin)_pause.ps1.log"
 
 $sleeptime = 10
 #------------------------------------------------------------

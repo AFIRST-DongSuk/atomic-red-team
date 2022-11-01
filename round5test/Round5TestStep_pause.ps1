@@ -1,9 +1,9 @@
-$PSDefaultParameterValues = @{"Invoke-AtomicTest:PathToAtomicsFolder"="C:\r5\atomic-red-team\atomics"}
-$ExecutionLogPath = "C:\r5\atomic-red-team\atomictest.log"
-Import-Module "C:\round4test\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" -Force
+$PSDefaultParameterValues = @{"Invoke-AtomicTest:PathToAtomicsFolder"="c:\round5test\atomics"}
+$ExecutionLogPath = "c:\round5test\atomictest.log"
+Import-Module "c:\round5test\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" -Force
 
 Stop-Transcript
-Start-Transcript "C:\round4test\Round5TestStep_pause.ps1.log"
+Start-Transcript "c:\round5test\Round5TestStep_pause.ps1.log"
 
 $sleeptime = 10
 #---------------------------------------------------------------------------------------
