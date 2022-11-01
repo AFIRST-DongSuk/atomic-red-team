@@ -369,8 +369,8 @@ invoke-atomictest T1053.005 -testnumber 7 -Cleanup -ExecutionLogPath $ExecutionL
 #---------------------------------------------------------------------------------------
 # T1055 - Process Injection
 #---------------------------------------------------------------------------------------
-invoke-atomictest T1055 -testnumber 1 -Getprereqs -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1055 -testnumber 1 -ExecutionLogPath $ExecutionLogPath 
+# invoke-atomictest T1055 -testnumber 1 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1055 -testnumber 1 -ExecutionLogPath $ExecutionLogPath 
 # invoke-atomictest T1055 -testnumber 2 -Getprereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 # invoke-atomictest T1055 -testnumber 2 -ExecutionLogPath $ExecutionLogPath  # 관리자 권한
 #---------------------------------------------------------------------------------------
