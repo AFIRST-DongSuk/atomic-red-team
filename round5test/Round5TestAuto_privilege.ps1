@@ -26,7 +26,7 @@ foreach ($line in $file)
     {
         write-host $dt.ToString("yyyy-MM-dd HH:mm:ss");
         IEX $line
-        timeout /t $sleeptime
+        ping -n $sleeptime 127.0.0.1
     }
     else {
         #do nothing
