@@ -521,9 +521,9 @@ invoke-atomictest T1069.002 -testnumber 13 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1070.003 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1070.003 -testnumber 10 -Cleanup -ExecutionLogPath $ExecutionLogPath
-#invoke-atomictest T1070.003 -testnumber 11 -ExecutionLogPath $ExecutionLogPath
-#invoke-atomictest T1070.003 -testnumber 12 -ExecutionLogPath $ExecutionLogPath
-#invoke-atomictest T1070.003 -testnumber 12 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1070.003 -testnumber 11 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1070.003 -testnumber 12 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1070.003 -testnumber 12 -Cleanup -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 
 #---------------------------------------------------------------------------------------
