@@ -1898,15 +1898,15 @@ ping -n $sleeptime 127.0.0.1
 #invoke-atomictest T1562.001 -testnumber 25 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 #invoke-atomictest T1562.001 -testnumber 25 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 #invoke-atomictest T1562.001 -testnumber 25 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
-$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
-invoke-atomictest T1562.001 -testnumber 27 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
-ping -n $sleeptime 127.0.0.1
-$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
-invoke-atomictest T1562.001 -testnumber 27 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
-ping -n $sleeptime 127.0.0.1
-$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
-invoke-atomictest T1562.001 -testnumber 27 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
-ping -n $sleeptime 127.0.0.1
+#$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
+#invoke-atomictest T1562.001 -testnumber 27 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+#ping -n $sleeptime 127.0.0.1
+#$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
+#invoke-atomictest T1562.001 -testnumber 27 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+#ping -n $sleeptime 127.0.0.1
+#$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
+#invoke-atomictest T1562.001 -testnumber 27 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+#ping -n $sleeptime 127.0.0.1
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1562.001 -testnumber 28 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 ping -n $sleeptime 127.0.0.1
