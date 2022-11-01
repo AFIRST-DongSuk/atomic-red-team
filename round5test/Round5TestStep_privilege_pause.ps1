@@ -1,14 +1,14 @@
-# 이 스크립트는 Round4TestStep.ps1 실행 전에 관리자 권한으로 먼저 수행해야 함
+# 이 스크립트는 Round5TestStep.ps1 실행 전에 관리자 권한으로 먼저 수행해야 함
  
-$PSDefaultParameterValues = @{"Invoke-AtomicTest:PathToAtomicsFolder"="c:\round4test\atomics"}
-$ExecutionLogPath = "C:\round4test\atomictest(admin).log"
+$PSDefaultParameterValues = @{"Invoke-AtomicTest:PathToAtomicsFolder"="C:\r5\atomic-red-team\atomics"}
+$ExecutionLogPath = "C:\r5\atomic-red-team\atomictest(admin).log"
 $isAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).isInRole([Security.Principal.WindowsBuiltinRole]::Administrator) # 관리자 권한 확인
 
 
-Import-Module "C:\round4test\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" -Force
-Start-Transcript "C:\round4test\Round5TestStep(admin)_pause.ps1.log"
+Import-Module "C:\r5\atomic-red-team\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" -Force
+Start-Transcript "C:\r5\atomic-red-team\Round5TestStep(admin)_pause.ps1.log"
 
-$sleeptime = 5
+$sleeptime = 1
 #------------------------------------------------------------
 # credential-access	- OS Credential Dumping(T1003)
 #invoke-atomictest T1003 -testnumber 2 -GetPrereqs -ExecutionLogPath $ExecutionLogPath #Manual
@@ -41,10 +41,6 @@ ping -n $sleeptime 127.0.0.1
 
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1134.001 -testnumber 4 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
-ping -n $sleeptime 127.0.0.1
-
-$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
-invoke-atomictest T1134.001 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 ping -n $sleeptime 127.0.0.1
 
 #------------------------------------------------------------
@@ -430,9 +426,15 @@ invoke-atomictest T1049 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #관�
 ping -n $sleeptime 127.0.0.1
 #invoke-atomictest T1049 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 #invoke-atomictest T1049 -testnumber 3 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss") # 일단 주석
 invoke-atomictest T1049 -testnumber 4 -Getprereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
-invoke-atomictest T1049 -testnumber 4 -ExecutionLogPath $ExecutionLogPath# 관리자 권한
-invoke-atomictest T1049 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath# 관리자 권한
+ping -n $sleeptime 127.0.0.1
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
+invoke-atomictest T1049 -testnumber 4 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+ping -n $sleeptime 127.0.0.1
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
+invoke-atomictest T1049 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+ping -n $sleeptime 127.0.0.1
 
 #------------------------------------------------------------
 # discovery - Scheduled Task/Job(T1053) T1053.003 - Cron
@@ -885,7 +887,7 @@ $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1090.001 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 ping -n $sleeptime 127.0.0.1
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
-invoke-atomictest T1090.001 -testnumber 3 -Getprereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1090.001 -testnumber 3 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 ping -n $sleeptime 127.0.0.1
 #invoke-atomictest T1090.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
 #invoke-atomictest T1090.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #Linux/macOS
@@ -1167,10 +1169,7 @@ $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 31 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 ping -n $sleeptime 127.0.0.1
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
-invoke-atomictest T1112 -testnumber 32 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
-ping -n $sleeptime 127.0.0.1
-$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
-invoke-atomictest T1112 -testnumber 32 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1112 -testnumber 32 -ExecutionLogPath -Cleanup $ExecutionLogPath # 관리자 권한
 ping -n $sleeptime 127.0.0.1
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1112 -testnumber 33 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
@@ -1896,6 +1895,9 @@ ping -n $sleeptime 127.0.0.1
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1562.001 -testnumber 21 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 ping -n $sleeptime 127.0.0.1
+#invoke-atomictest T1562.001 -testnumber 25 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+#invoke-atomictest T1562.001 -testnumber 25 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+#invoke-atomictest T1562.001 -testnumber 25 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 $dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
 invoke-atomictest T1562.001 -testnumber 27 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 ping -n $sleeptime 127.0.0.1
