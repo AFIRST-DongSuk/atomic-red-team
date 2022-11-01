@@ -596,7 +596,7 @@ invoke-atomictest T1082 -testnumber 16 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1082 -testnumber 17 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1082 -testnumber 18 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1082 -testnumber 19 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1082 -testnumber 20 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1082 -testnumber 20 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1082 -testnumber 21 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 # invoke-atomictest T1082 -testnumber 22 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 #---------------------------------------------------------------------------------------
