@@ -2,6 +2,7 @@ $PSDefaultParameterValues = @{"Invoke-AtomicTest:PathToAtomicsFolder"="C:\atomic
 $ExecutionLogPath = "C:\atomic-red-team\atomictest.log"
 Import-Module "C:\round4test\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" -Force
 
+
 #---------------------------------------------------------------------------------------
 # T1001.002 Data Obfuscation: Steganography
 #---------------------------------------------------------------------------------------
@@ -954,9 +955,9 @@ invoke-atomictest T1204.002 -testnumber 10 -Cleanup -ExecutionLogPath $Execution
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1218 -testnumber 2 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1218 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1218 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1218 -testnumber 4 -ExecutionLogPath $ExecutionLogPath -TimeoutSeconds 10
 invoke-atomictest T1218 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1218 -testnumber 6 -Getprereqs -ExecutionLogPath $ExecutionLogPath\
+invoke-atomictest T1218 -testnumber 6 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1218 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1218 -testnumber 7 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1218 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
@@ -980,7 +981,7 @@ invoke-atomictest T1218 -testnumber 12 -Cleanup -ExecutionLogPath $ExecutionLogP
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1218.011 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1218.011 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1218.011 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1218.011 -testnumber 2 -ExecutionLogPath $ExecutionLogPath -TimeoutSeconds 5
 invoke-atomictest T1218.011 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1218.011 -testnumber 4 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1218.011 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
@@ -1170,7 +1171,7 @@ invoke-atomictest T1547.009 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionL
 #---------------------------------------------------------------------------------------
 # T1548.002 - Abuse Elevation Control Mechanism: Bypass User Access Control
 #---------------------------------------------------------------------------------------
-invoke-atomictest t1548.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath -TimeoutSeconds 1
+invoke-atomictest t1548.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath -TimeoutSeconds 10
 invoke-atomictest t1548.002 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest t1548.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest t1548.002 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath
@@ -1190,8 +1191,8 @@ invoke-atomictest t1548.002 -testnumber 20 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 # T1550.002 - Use Alternate Authentication Material: Pass the Hash
 #---------------------------------------------------------------------------------------
-invoke-atomictest t1550.002A -testnumber 1 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest t1550.002A -testnumber 1 -ExecutionLogPath $ExecutionLogPath -TimeoutSeconds 30
+invoke-atomictest t1550.002 -testnumber 1 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest t1550.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath -TimeoutSeconds 30
 #---------------------------------------------------------------------------------------
 
 #---------------------------------------------------------------------------------------
