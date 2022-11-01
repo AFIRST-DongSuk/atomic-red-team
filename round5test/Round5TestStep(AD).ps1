@@ -36,3 +36,9 @@ invoke-atomictest T1003.003 -testnumber 8 -Cleanup -ExecutionLogPath $ExecutionL
 # T1018 - Remote System Discovery
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1018 -testnumber 16 -ExecutionLogPath $ExecutionLogPath #  AD에서 실행, 관리자 권한
+
+#---------------------------------------------------------------------------------------
+# T1562.002 - Impair Defenses: Disable Windows Event Logging
+#---------------------------------------------------------------------------------------
+#invoke-atomictest T1562.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #AD 
+#invoke-atomictest T1562.002 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath #AD
