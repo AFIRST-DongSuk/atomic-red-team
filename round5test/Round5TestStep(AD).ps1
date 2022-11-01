@@ -40,5 +40,5 @@ invoke-atomictest T1018 -testnumber 16 -ExecutionLogPath $ExecutionLogPath #  A
 #---------------------------------------------------------------------------------------
 # T1562.002 - Impair Defenses: Disable Windows Event Logging
 #---------------------------------------------------------------------------------------
-invoke-atomictest T1562.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #AD 
-invoke-atomictest T1562.002 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath #AD
+#invoke-atomictest T1562.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #AD 
+#invoke-atomictest T1562.002 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath #AD
