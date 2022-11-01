@@ -8,7 +8,7 @@ $isAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIden
 Import-Module "C:\r5\atomic-red-team\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" -Force
 Start-Transcript "C:\r5\atomic-red-team\Round5TestStep(admin)_pause.ps1.log"
 
-$sleeptime = 1
+$sleeptime = 10
 #------------------------------------------------------------
 # credential-access	- OS Credential Dumping(T1003)
 #invoke-atomictest T1003 -testnumber 2 -GetPrereqs -ExecutionLogPath $ExecutionLogPath #Manual
