@@ -1,8 +1,8 @@
-$PSDefaultParameterValues = @{"Invoke-AtomicTest:PathToAtomicsFolder"="C:\atomic-red-team\atomics"}
-$ExecutionLogPath = "C:\atomic-red-team\atomictest.log"
+$PSDefaultParameterValues = @{"Invoke-AtomicTest:PathToAtomicsFolder"="C:\r5\atomic-red-team\atomics"}
+$ExecutionLogPath = "C:\r5\atomic-red-team\atomictest.log"
 Import-Module "C:\round4test\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" -Force
 
-
+Start-Transcript "C:\r5\atomic-red-team\Result.log"
 #---------------------------------------------------------------------------------------
 # T1001.002 Data Obfuscation: Steganography
 #---------------------------------------------------------------------------------------
@@ -173,7 +173,7 @@ invoke-atomictest T1018 -testnumber 19 -ExecutionLogPath $ExecutionLogPath
 # T1020 - Automated Exfiltration
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1020 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1020 -testnumber 1 -Cleanup  -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1020 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 
 
@@ -197,9 +197,9 @@ invoke-atomictest T1021.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 # T1021.004 Remote Services: SSH
 #---------------------------------------------------------------------------------------
-invoke-atomictest T1021.004 -testnumber 1 -Getprereqs -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1021.004 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1021.004 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1021.004A -testnumber 1 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1021.004A -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1021.004A -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 
 
@@ -334,7 +334,7 @@ invoke-atomictest T1047 -testnumber 9 -Cleanup -ExecutionLogPath $ExecutionLogPa
 # T1049 - System Network Connections Discovery
 #---------------------------------------------------------------------------------------
 
-# invoke-atomictest T1049 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1049 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 # invoke-atomictest T1049 -testnumber 4 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 # invoke-atomictest T1049 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 
@@ -521,7 +521,7 @@ invoke-atomictest T1069.002 -testnumber 13 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1070.003 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1070.003 -testnumber 10 -Cleanup -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1070.003 -testnumber 11 -ExecutionLogPath $ExecutionLogPath 
+invoke-atomictest T1070.003 -testnumber 11 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1070.003 -testnumber 12 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1070.003 -testnumber 12 -Cleanup -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
@@ -545,7 +545,7 @@ invoke-atomictest T1070.004 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 # T1071.001 - Application Layer Protocol: Web Protocols
 #---------------------------------------------------------------------------------------
-invoke-atomictest T1071.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1071.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1071.001 -testnumber 2 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1071.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
@@ -606,8 +606,8 @@ invoke-atomictest T1082 -testnumber 20 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 # T1083 - File and Directory Discovery
 #---------------------------------------------------------------------------------------
-invoke-atomictest T1083 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1083 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1083 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1083 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1083 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1083 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1083 -testnumber 5 -Cleanup -ExecutionLogPath $ExecutionLogPath
@@ -627,27 +627,27 @@ invoke-atomictest T1087.001 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 # T1087.002 - Account Discovery: Domain Account
 #---------------------------------------------------------------------------------------
-invoke-atomictest T1087.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1087.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1087.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1087.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1087.002 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1087.002 -testnumber 4 -Getprereqs -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1087.002 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1087.002 -testnumber 5 -Getprereqs -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1087.002 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1087.002 -testnumber 6 -Getprereqs -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1087.002 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1087.002 -testnumber 7 -Getprereqs -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1087.002 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1087.002 -testnumber 8 -Getprereqs -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1087.002 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1087.002 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1087.002 -testnumber 10 -Getprereqs -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1087.002 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1087.002 -testnumber 11 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1087.002 -testnumber 12 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1087.002 -testnumber 13 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1087.002 -testnumber 14 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1087.002 -testnumber 15 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1087.002 -testnumber 4 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1087.002 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1087.002 -testnumber 5 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1087.002 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1087.002 -testnumber 6 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1087.002 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1087.002 -testnumber 7 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1087.002 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1087.002 -testnumber 8 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1087.002 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1087.002 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1087.002 -testnumber 10 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1087.002 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1087.002 -testnumber 11 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1087.002 -testnumber 12 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1087.002 -testnumber 13 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1087.002 -testnumber 14 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1087.002 -testnumber 15 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1087.002 -testnumber 16 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1087.002 -testnumber 16 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
@@ -675,37 +675,37 @@ invoke-atomictest T1105 -testnumber 7 -Cleanup -ExecutionLogPath $ExecutionLogPa
 invoke-atomictest T1105 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1105 -testnumber 8 -Cleanup -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1105 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1105 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1105 -testnumber 10 -Cleanup -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1105 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1105 -testnumber 10 -Cleanup -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1105 -testnumber 13 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1105 -testnumber 15 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1105 -testnumber 15 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1105 -testnumber 16 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1105 -testnumber 17 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1105 -testnumber 17 -Cleanup -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1105 -testnumber 17 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1105 -testnumber 17 -Cleanup -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1105 -testnumber 18 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1105 -testnumber 18 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1105 -testnumber 18 -Cleanup -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1105 -testnumber 19 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1105 -testnumber 19 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1105 -testnumber 20 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1105 -testnumber 21 -Getprereqs -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1105 -testnumber 21 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1105 -testnumber 21 -Cleanup -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1105 -testnumber 21 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1105 -testnumber 21 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1105 -testnumber 21 -Cleanup -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1105 -testnumber 22 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1105 -testnumber 22 -Cleanup -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1105 -testnumber 23 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1105 -testnumber 23 -Cleanup -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1105 -testnumber 24 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1105 -testnumber 24 -Cleanup -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1105 -testnumber 24 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1105 -testnumber 24 -Cleanup -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1105 -testnumber 25 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1105 -testnumber 25 -Cleanup -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1105 -testnumber 26 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1105 -testnumber 26 -Cleanup -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1105 -testnumber 28 -Getprereqs -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1105 -testnumber 28 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1105 -testnumber 28 -Cleanup -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1105 -testnumber 29 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1105 -testnumber 29 -Cleanup -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1105 -testnumber 26 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1105 -testnumber 26 -Cleanup -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1105 -testnumber 28 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1105 -testnumber 28 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1105 -testnumber 28 -Cleanup -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1105 -testnumber 29 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1105 -testnumber 29 -Cleanup -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1105 -testnumber 11 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 # invoke-atomictest T1105 -testnumber 12 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 # invoke-atomictest T1105 -testnumber 12 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
@@ -725,18 +725,18 @@ invoke-atomictest T1106 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 # T1110.003 - Brute Force: Password Spraying
 #---------------------------------------------------------------------------------------
-invoke-atomictest T1110.003 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1110.003 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1110.003 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1110.003 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1110.003 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1110.003 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1110.003 -testnumber 4 -ExecutionLogPath $ExecutionLogPath #Azure-ad 
 # invoke-atomictest T1110.003 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1110.003 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1110.003 -testnumber 6 -Getprereqs -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1110.003 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1110.003 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1110.003 -testnumber 6 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1110.003 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1110.003 -testnumber 7 -ExecutionLogPath $ExecutionLogPath #Azure-ad
 # invoke-atomictest T1110.003 -testnumber 7 -Cleanup -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1110.003 -testnumber 8 -Getprereqs -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1110.003 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1110.003 -testnumber 8 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1110.003 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 
 
@@ -1181,7 +1181,7 @@ invoke-atomictest t1548.002 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest t1548.002 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest t1548.002 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest t1548.002 -testnumber 7 -Cleanup -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest t1548.002 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest t1548.002 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest t1548.002 -testnumber 19 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest t1548.002 -testnumber 20 -ExecutionLogPath $ExecutionLogPath
 
@@ -1204,7 +1204,7 @@ invoke-atomictest t1552.001 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest t1552.001 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest t1552.001 -testnumber 9 -cleanup -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest t1552.001 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest t1552.001 -testnumber 11 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest t1552.001 -testnumber 11 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest t1552.001 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 # invoke-atomictest t1552.001 -testnumber 4 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 #---------------------------------------------------------------------------------------
@@ -1403,8 +1403,8 @@ invoke-atomictest T1566.001 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionL
 #---------------------------------------------------------------------------------------
 # T1569.002 - System Services: Service Execution
 #---------------------------------------------------------------------------------------
-invoke-atomictest T1569.002 -testnumber 2 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1569.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1569.002 -testnumber 2 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1569.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1569.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 # invoke-atomictest T1569.002 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 # invoke-atomictest T1569.002 -testnumber 4 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
@@ -1423,7 +1423,7 @@ invoke-atomictest T1571 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 # T1573 - Encrypted Channel
 #---------------------------------------------------------------------------------------
-invoke-atomictest T1573 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1573 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 
 
