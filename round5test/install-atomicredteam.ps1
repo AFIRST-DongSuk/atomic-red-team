@@ -36,7 +36,7 @@ function Install-AtomicRedTeam {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory = $False, Position = 0)]
-        [string]$InstallPath = $( if ($IsLinux -or $IsMacOS) { $Env:HOME + "/AtomicRedTeam" } else { "c:\round4test" }),
+        [string]$InstallPath = $( if ($IsLinux -or $IsMacOS) { $Env:HOME + "/AtomicRedTeam" } else { "c:\round5test" }),
 
         [Parameter(Mandatory = $False, Position = 1)]
         [string]$DownloadPath = $InstallPath,
@@ -45,13 +45,13 @@ function Install-AtomicRedTeam {
         [string]$RepoOwner = "crav3r",
 
         [Parameter(Mandatory = $False, Position = 3)]
-        [string]$Branch = "round4test",
+        [string]$Branch = "round5test",
 
         [Parameter(Mandatory = $False, Position = 4)]
         [switch]$getAtomics = $False,
 
         [Parameter(Mandatory = $False, Position = 5)]
-        [switch]$getRound4TestStep = $False,
+        [switch]$getRound5TestStep = $False,
 
         [Parameter(Mandatory = $False)]
         [switch]$Force = $False # delete the existing install directory and reinstall
@@ -72,7 +72,8 @@ function Install-AtomicRedTeam {
             }
             if (-not (Test-Path $InstallPath)) { New-Item -ItemType directory -Path $InstallPath | Out-Null }
 
-            $url = "https://github.com/$RepoOwner/invoke-atomicredteam/archive/$Branch.zip"
+            #$url = "https://github.com/$RepoOwner/invoke-atomicredteam/archive/$Branch.zip"
+            $url = "https://github.com/$RepoOwner/atomic-red-team/archive/refs/heads/$Branch.zip"
             $path = Join-Path $DownloadPath "$Branch.zip"
             [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
             write-verbose "Beginning download from Github"
@@ -96,17 +97,17 @@ function Install-AtomicRedTeam {
 
             if ($getAtomics) {
                 Write-Verbose "Installing Atomics Folder"
-                Invoke-Expression (New-Object Net.WebClient).DownloadString("https://raw.githubusercontent.com/$RepoOwner/invoke-atomicredteam/round4test/install-atomicsfolder.ps1"); Install-AtomicsFolder -InstallPath $InstallPath -DownloadPath $DownloadPath -Force:$Force -RepoOwner $RepoOwner
+                Invoke-Expression (New-Object Net.WebClient).DownloadString("https://raw.githubusercontent.com/$RepoOwner/atomic-red-team/round5test/round5test/install-atomicredteam.ps1"); Install-AtomicsFolder -InstallPath $InstallPath -DownloadPath $DownloadPath -Force:$Force -RepoOwner $RepoOwner
             }
 
-            if ($getRound4TestStep) {
-                Write-Verbose "Downloading Round4TestStep Powershell Script Files"
-                Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$RepoOwner/atomic-red-team/round4test/round4test/Round4TestStep.ps1" -OutFile "$DownloadPath\Round4TestStep.ps1"
-                Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$RepoOwner/atomic-red-team/round4test/round4test/Round4TestStep_pause.ps1" -OutFile "$DownloadPath\Round4TestStep_pause.ps1"
-                Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$RepoOwner/atomic-red-team/round4test/round4test/Round4TestStep(admin).ps1" -OutFile "$DownloadPath\Round4TestStep(admin).ps1"
-                Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$RepoOwner/atomic-red-team/round4test/round4test/Round4TestStep(admin)_pause.ps1" -OutFile "$DownloadPath\Round4TestStep(admin)_pause.ps1"
-                Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$RepoOwner/atomic-red-team/round4test/round4test/Round4TestStep(manual).txt" -OutFile "$DownloadPath\Round4TestStep(manual).txt"
-                #Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$RepoOwner/atomic-red-team/round4test/round4test/Round4TestStep(manual_admin).ps1" -OutFile "$DownloadPath\Round4TestStep(manual_admin).ps1"
+            if ($getRound5TestStep) {
+                Write-Verbose "Downloading Round5TestStep Powershell Script Files"
+                Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$RepoOwner/atomic-red-team/round5test/round5test/Round5TestStep.ps1" -OutFile "$DownloadPath\Round5TestStep.ps1"
+                Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$RepoOwner/atomic-red-team/round5test/round5test/Round5TestStep_pause.ps1" -OutFile "$DownloadPath\Round5TestStep_pause.ps1"
+                Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$RepoOwner/atomic-red-team/round5test/round5test/Round5TestStep_privilege.ps1" -OutFile "$DownloadPath\Round5TestStep(admin).ps1"
+                Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$RepoOwner/atomic-red-team/round5test/round5test/Round5TestStep_privilege_pause.ps1" -OutFile "$DownloadPath\Round5TestStep(admin)_pause.ps1"
+                Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$RepoOwner/atomic-red-team/round5test/round5test/Round5TestStep(manual).txt" -OutFile "$DownloadPath\Round5TestStep(manual).txt"
+                Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$RepoOwner/atomic-red-team/round5test/round5test/Round5TestStep(AD).ps1" -OutFile "$DownloadPath\Round5TestStep(manual).txt"
             }
 
             Write-Host "Installation of Invoke-AtomicRedTeam is complete. You can now use the Invoke-AtomicTest function" -Fore Yellow
