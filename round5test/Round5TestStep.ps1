@@ -1314,8 +1314,8 @@ invoke-atomictest T1562.001 -testnumber 30 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 # T1562.002 - Impair Defenses: Disable Windows Event Logging
 #---------------------------------------------------------------------------------------
-invoke-atomictest T1562.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1562.002 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1562.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath #AD 
+# invoke-atomictest T1562.002 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath #AD
 invoke-atomictest T1562.002 -testnumber 6 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1562.002 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1562.002 -testnumber 6 -Cleanup -ExecutionLogPath $ExecutionLogPath
@@ -1446,7 +1446,7 @@ invoke-atomictest T1573 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 # T1574.008 - Hijack Execution Flow: Path Interception by Search Order Hijacking
 #---------------------------------------------------------------------------------------
-invoke-atomictest T1574.008 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1574.008 -testnumber 1 -ExecutionLogPath $ExecutionLogPath -TimeoutSeconds 10
 invoke-atomictest T1574.008 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath # powershell 새로 실행해서 cleanup 명령 수행해야 함
 #---------------------------------------------------------------------------------------
 
