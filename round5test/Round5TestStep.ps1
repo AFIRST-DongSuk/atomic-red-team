@@ -727,7 +727,7 @@ invoke-atomictest T1106 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 # invoke-atomictest T1110.003 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1110.003 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
-# invoke-atomictest T1110.003 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+ invoke-atomictest T1110.003 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1110.003 -testnumber 4 -ExecutionLogPath $ExecutionLogPath #Azure-ad 
 # invoke-atomictest T1110.003 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1110.003 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
