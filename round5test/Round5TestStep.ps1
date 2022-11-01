@@ -197,9 +197,9 @@ invoke-atomictest T1021.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 # T1021.004 Remote Services: SSH
 #---------------------------------------------------------------------------------------
-invoke-atomictest T1021.004A -testnumber 1 -Getprereqs -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1021.004A -testnumber 1 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1021.004A -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1021.004A -testnumber 1 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1021.004A -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1021.004A -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 
 
