@@ -408,7 +408,7 @@ invoke-atomictest T1053.005 -testnumber 7 -Cleanup -ExecutionLogPath $ExecutionL
 #---------------------------------------------------------------------------------------
 # T1059.001 - Command and Scripting Interpreter: PowerShell
 #---------------------------------------------------------------------------------------
-invoke-atomictest T1059.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1059.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1059.001 -testnumber 2 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1059.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1059.001 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath
