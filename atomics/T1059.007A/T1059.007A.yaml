@@ -11,18 +11,18 @@ atomic_tests:
     js_path:
       description: Path of putty executable
       type: Path
-      default: PathToAtomicsFolder\T1059.007/src/
+      default: PathToAtomicsFolder\T1059.007A\src\T1059.007.js
   dependencies:
   - description: |
       T1059_007.js must be located at #{js_path}
     prereq_command: |
-      if (Test-Path #{js_path}\T1059.007.js) {exit 0} else {exit 1}
+      if (Test-Path #{js_path}) {exit 0} else {exit 1}
     get_prereq_command: |
-      Invoke-WebRequest "https://raw.githubusercontent.com/crav3r/atomic-red-team/round5test/atomics/T1059.007/src/T1059_007.js" -OutFile "#{js_path}\T1059_007.js"
+      Invoke-WebRequest "https://raw.githubusercontent.com/crav3r/atomic-red-team/round5test/atomics/T1059.007A/src/T1059_007.js" -OutFile "#{js_path}\T1059_007.js"
     
   executor:
     command: |
-      wscript #{js_path}\T1059_007.js
+      wscript #{js_path}
     cleanup_command: |
       Remove-Item $env:Systemroot\Temp\T1059_007.txt -Force    
     name: powershell
