@@ -11,6 +11,14 @@ Start-Transcript "c:\round5test\Round5TestStep(admin)_ps1.log"
 
 #------------------------------------------------------------
 # credential-access	- OS Credential Dumping(T1003)
+write-host "T1003 Process Start, Press Any Key to Continue";read-host
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
+invoke-atomictest T1003 -testnumber 1 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
+
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
+invoke-atomictest T1003 -testnumber 1 -ExecutionLogPath $ExecutionLogPath 
+timeout /t $sleeptime
 #invoke-atomictest T1003 -testnumber 2 -GetPrereqs -ExecutionLogPath $ExecutionLogPath #Manual
 #invoke-atomictest T1003 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #로그아웃 후 파일 생성 #Manual
 #invoke-atomictest T1003 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath #Manual

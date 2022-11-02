@@ -12,6 +12,8 @@ Start-Transcript "c:\round5test\Round5TestStep(admin)_pause.ps1.log"
 $sleeptime = 10
 #------------------------------------------------------------
 # credential-access	- OS Credential Dumping(T1003)
+invoke-atomictest T1003 -testnumber 1 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
+invoke-atomictest T1003 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 #invoke-atomictest T1003 -testnumber 2 -GetPrereqs -ExecutionLogPath $ExecutionLogPath #Manual
 #invoke-atomictest T1003 -testnumber 2 -ExecutionLogPath $ExecutionLogPath #로그아웃 후 파일 생성 #Manual
 #invoke-atomictest T1003 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath #Manual
