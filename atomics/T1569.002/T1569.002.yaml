@@ -44,14 +44,14 @@ atomic_tests:
       description: Remote hostname or IP address
       type: String
       default: localhost
-    user_name:
-      description: Username
-      type: String
-      default: DOMAIN\Administrator
-    password:
-      description: Password
-      type: String
-      default: P@ssw0rd1
+    # user_name:
+    #   description: Username
+    #   type: String
+    #   default: DOMAIN\Administrator
+    # password:
+    #   description: Password
+    #   type: String
+    #   default: P@ssw0rd1
     psexec_exe:
       description: Path to PsExec
       type: String
@@ -69,7 +69,7 @@ atomic_tests:
       Copy-Item $env:TEMP\PsTools\PsExec.exe "#{psexec_exe}" -Force
   executor:
     command: |
-      #{psexec_exe} \\#{remote_host} -u #{user_name} -p #{password} -accepteula "C:\Windows\System32\calc.exe"
+      #{psexec_exe} \\#{remote_host} -accepteula "C:\Windows\System32\calc.exe"
     name: command_prompt
 
 
