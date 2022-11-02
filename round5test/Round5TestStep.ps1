@@ -2,7 +2,7 @@ $PSDefaultParameterValues = @{"Invoke-AtomicTest:PathToAtomicsFolder"="c:\round5
 $ExecutionLogPath = "c:\round5test\atomictest.log"
 Import-Module "c:\round5test\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" -Force
 
-Start-Transcript "c:\round5test\Result.log"
+Start-Transcript "c:\round5test\Round5TestStep_ps1.log"
 #---------------------------------------------------------------------------------------
 # T1001.002 Data Obfuscation: Steganography
 #---------------------------------------------------------------------------------------
@@ -152,18 +152,19 @@ invoke-atomictest T1016.001A -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 # T1018 - Remote System Discovery
 #---------------------------------------------------------------------------------------
-invoke-atomictest T1018 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # net view 명령어 사용 ( Computer Browser 서비스 동작해야 명령어 사용가능)
-invoke-atomictest T1018 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # AD 환경 도메인 연결돼야함.
-invoke-atomictest T1018 -testnumber 3 -ExecutionLogPath $ExecutionLogPath 
-invoke-atomictest T1018 -testnumber 4 -ExecutionLogPath $ExecutionLogPath -TimeoutSeconds 15
-invoke-atomictest T1018 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1018 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1018 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1018 -testnumber 11 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1018 -testnumber 15 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1018 -testnumber 17 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1018 -testnumber 18 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1018 -testnumber 19 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1018 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # net view 명령어 사용 ( Computer Browser 서비스 동작해야 명령어 사용가능)
+#invoke-atomictest T1018 -testnumber 2 -ExecutionLogPath $ExecutionLogPath # AD 환경 도메인 연결돼야함.
+#invoke-atomictest T1018 -testnumber 3 -ExecutionLogPath $ExecutionLogPath 
+#invoke-atomictest T1018 -testnumber 4 -ExecutionLogPath $ExecutionLogPath -TimeoutSeconds 15
+#invoke-atomictest T1018 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1018 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1018 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1018 -testnumber 11 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1018 -testnumber 15 -ExecutionLogPath $ExecutionLogPath
+
+#invoke-atomictest T1018 -testnumber 17 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1018 -testnumber 18 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1018 -testnumber 19 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1018 -testnumber 9 -GetPrereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 # invoke-atomictest T1018 -testnumber 9 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 # invoke-atomictest T1018 -testnumber 16 -ExecutionLogPath $ExecutionLogPath #  AD에서 실행, 관리자 권한
@@ -408,7 +409,7 @@ invoke-atomictest T1053.005 -testnumber 7 -Cleanup -ExecutionLogPath $ExecutionL
 #---------------------------------------------------------------------------------------
 # T1059.001 - Command and Scripting Interpreter: PowerShell
 #---------------------------------------------------------------------------------------
-invoke-atomictest T1059.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1059.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1059.001 -testnumber 2 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1059.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1059.001 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath
@@ -522,9 +523,9 @@ invoke-atomictest T1069.002 -testnumber 13 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1070.003 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1070.003 -testnumber 10 -Cleanup -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1070.003 -testnumber 11 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1070.003 -testnumber 12 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1070.003 -testnumber 12 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1070.003 -testnumber 11 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1070.003 -testnumber 12 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest T1070.003 -testnumber 12 -Cleanup -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 
 #---------------------------------------------------------------------------------------
@@ -1238,7 +1239,7 @@ invoke-atomictest t1555 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest t1555 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest t1555 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest t1555 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest t1555 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
+#invoke-atomictest t1555 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 
 
@@ -1447,8 +1448,9 @@ invoke-atomictest T1571 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 # T1574.008 - Hijack Execution Flow: Path Interception by Search Order Hijacking
 #---------------------------------------------------------------------------------------
-invoke-atomictest T1574.008 -testnumber 1 -ExecutionLogPath $ExecutionLogPath -TimeoutSeconds 10
-invoke-atomictest T1574.008 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath # powershell 새로 실행해서 cleanup 명령 수행해야 함
+#invoke-atomictest T1574.008 -testnumber 1 -ExecutionLogPath $ExecutionLogPath -TimeoutSeconds 10
+
+#invoke-atomictest T1574.008 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath # powershell 새로 실행해서 cleanup 명령 수행해야 함
 #---------------------------------------------------------------------------------------
 
 

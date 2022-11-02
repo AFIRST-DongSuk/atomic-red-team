@@ -24,7 +24,7 @@ atomic_tests:
     putty_exe:
       description: Path of putty executable
       type: Path
-      default: PathToAtomicsFolder\T1021.004\src\putty.exe
+      default: PathToAtomicsFolder\T1021.004A\src\putty.exe
   dependencies:
   - description: |
       Putty tool from Sysinternals must exist on disk at specified location (#{putty_exe})
