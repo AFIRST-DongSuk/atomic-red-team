@@ -1,28 +1,36 @@
-attack_technique: T1059.007
-display_name: "Command and Scripting Interpreter: JavaScript"
+attack_technique: T1059.007A
+display_name: 'Command and Scripting Interpreter: javascript'
 atomic_tests:
-- name: "Command and Scripting Interpreter: JavaScript"
-  auto_generated_guid: d6042746-07d4-4c92-9ad8-e644c114a231
-  description: |
-    test
+- name: Javascript execution to gather local computer information - cscript
+  auto_generated_guid: 05c15252-cd7f-11eb-b8bc-0242ac130003
+  description: |-
+    Javascript execution test, execute javacript via cscript.
+    When successful, system information will be written to $env:TEMP\T1059.007A.out.txt.
   supported_platforms:
   - windows
   input_arguments:
-    js_path:
-      description: Path of putty executable
-      type: Path
-      default: PathToAtomicsFolder\T1059.007A\src\T1059.007.js
-  dependencies:
-  - description: |
-      T1059_007.js must be located at #{js_path}
-    prereq_command: |
-      if (Test-Path #{js_path}) {exit 0} else {exit 1}
-    get_prereq_command: |
-      Invoke-WebRequest "https://raw.githubusercontent.com/crav3r/atomic-red-team/round5test/atomics/T1059.007A/src/T1059_007.js" -OutFile "#{js_path}\T1059_007.js"
-    
+    javascript:
+      description: Path to sample script
+      type: String
+      default: PathToAtomicsFolder\T1059.007A\src\sys_info.js
   executor:
-    command: |
-      wscript #{js_path}
-    cleanup_command: |
-      Remove-Item $env:Systemroot\Temp\T1059_007.txt -Force    
+    command: 'cscript #{javascript} > $env:TEMP\T1059.007A.out.txt'
+    cleanup_command: |-      
+      Remove-Item $env:TEMP\T1059.007A.out.txt -ErrorAction Ignore
+    name: powershell
+- name: Javascript execution to gather local computer information - wscript
+  auto_generated_guid: 8df71742-cd7f-11eb-b8bc-0242ac130003
+  description: |
+    Javascript execution test, execute Javascript with wscript.
+    When successful, system information will be pop up. after that user should click the OK button 4 times. 
+  supported_platforms:
+  - windows
+  input_arguments:        
+    javascript:
+      description: Path to sample script
+      type: String
+      default: PathToAtomicsFolder\T1059.007A\src\sys_info.js
+  executor:
+    command: |      
+      cmd /c wscript #{javascript}    
     name: powershell
