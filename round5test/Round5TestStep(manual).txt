@@ -29,3 +29,10 @@ Step 4. invoke-atomictest T1003 -testnumber 2 -Cleanup -ExecutionLogPath $Execut
 Step 1. "Windows 10 PC(192.168.1.10)" -> "Windows Server 2019(192.168.1.100)" RDP 접근 
 Step 2. invoke-atomictest T1112 -testnumber 41 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 Step 3. invoke-atomictest T1112 -testnumber 41 -Cleanup -ExecutionLogPath $ExecutionLogPath  # 관리자 권한
+
+
+#------------------------------------------------------------
+T1548.002 - Abuse Elevation Control Mechanism: Bypass User Access Control
+#------------------------------------------------------------
+Step 1. invoke-atomictest t1548.002 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
+성공적으로 실행되면, 실행 중이던 Powershell 터미널은 종료되고 Administrator 권한의 Powershell 터미널이 생성됨
