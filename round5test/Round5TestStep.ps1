@@ -664,9 +664,11 @@ invoke-atomictest T1087.002 -testnumber 16 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 # T1095 - Non-Application Layer Protocol
 #---------------------------------------------------------------------------------------
-# invoke-atomictest T1087.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
-# invoke-atomictest T1087.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
-# invoke-atomictest T1087.002 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1095 -testnumber 1 -ExecutionLogPath $ExecutionLogPath -TimeoutSeconds 10
+invoke-atomictest T1095 -testnumber 2 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1095 -testnumber 2 -ExecutionLogPath $ExecutionLogPath -TimeoutSeconds 10
+invoke-atomictest T1095 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1095 -testnumber 3 -ExecutionLogPath $ExecutionLogPath -TimeoutSeconds 10
 #---------------------------------------------------------------------------------------
 
 #---------------------------------------------------------------------------------------
