@@ -34,5 +34,40 @@ Step 3. invoke-atomictest T1112 -testnumber 41 -Cleanup -ExecutionLogPath $Execu
 #------------------------------------------------------------
 T1548.002 - Abuse Elevation Control Mechanism: Bypass User Access Control
 #------------------------------------------------------------
-Step 1. invoke-atomictest t1548.002 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
-성공적으로 실행되면, 실행 중이던 Powershell 터미널은 종료되고 Administrator 권한의 Powershell 터미널이 생성됨
+
+# Atomic Test #9 - Bypass UAC using SilentCleanup task
+
+Step 1. invoke-atomictest t1548.002 -testnumber 9 -ExecutionLogPath $ExecutionLogPath # 성공적으로 실행되면, 실행 중이던 Powershell 터미널은 종료되고 Administrator 권한의 Powershell 터미널이 생성됨
+
+# Atomic Test #11 - UACME Bypass Method 31
+Step 1. invoke-atomictest t1548.002 -testnumber 11 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+Step 2. invoke-atomictest t1548.002 -testnumber 11 -ExecutionLogPath $ExecutionLogPath
+
+
+# Atomic Test #12 - UACME Bypass Method 33
+Step 1. invoke-atomictest t1548.002 -testnumber 12 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+Step 2. invoke-atomictest t1548.002 -testnumber 12 -ExecutionLogPath $ExecutionLogPath # 관리자 권한 cmd.exe 창 실행
+
+
+# Atomic Test #13 - UACME Bypass Method 34
+Step 1. invoke-atomictest t1548.002 -testnumber 13 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+Step 2. invoke-atomictest t1548.002 -testnumber 13 -ExecutionLogPath $ExecutionLogPath # 관리자 권한 cmd창 실행
+
+
+# Atomic Test #14 - UACME Bypass Method 39
+Step 1. invoke-atomictest t1548.002 -testnumber 14 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+Step 2. invoke-atomictest t1548.002 -testnumber 14 -ExecutionLogPath $ExecutionLogPath # 관리자 권한 cmd창 실행
+
+
+# Atomic Test #15 - UACME Bypass Method 56
+Step 1. invoke-atomictest t1548.002 -testnumber 15 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+Step 2. invoke-atomictest t1548.002 -testnumber 15 -ExecutionLogPath $ExecutionLogPath
+
+
+# Atomic Test #16 - UACME Bypass Method 59
+Step 1. invoke-atomictest t1548.002 -testnumber 16 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+Step 2. invoke-atomictest t1548.002 -testnumber 16 -ExecutionLogPath $ExecutionLogPath
+
+# Atomic Test #17 - UACME Bypass Method 61
+Step 1. invoke-atomictest t1548.002 -testnumber 17 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
+Step 2. invoke-atomictest t1548.002 -testnumber 17 -ExecutionLogPath $ExecutionLogPath
