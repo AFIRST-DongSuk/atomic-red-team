@@ -1117,9 +1117,21 @@ timeout /t $sleeptime
 #---------------------------------------------------------------------------------------
 # T1095 - Non-Application Layer Protocol
 #---------------------------------------------------------------------------------------
-# invoke-atomictest T1087.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
-# invoke-atomictest T1087.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
-# invoke-atomictest T1087.002 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
+invoke-atomictest T1095 -testnumber 1 -ExecutionLogPath $ExecutionLogPath -TimeoutSeconds 10
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
+invoke-atomictest T1095 -testnumber 2 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
+invoke-atomictest T1095 -testnumber 2 -ExecutionLogPath $ExecutionLogPath -TimeoutSeconds 10
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
+invoke-atomictest T1095 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath
+timeout /t $sleeptime
+$dt=date;write-host $dt.ToString("yyyy-MM-dd HH:mm:ss")
+invoke-atomictest T1095 -testnumber 3 -ExecutionLogPath $ExecutionLogPath -TimeoutSeconds 10
+timeout /t $sleeptime
 #---------------------------------------------------------------------------------------
 
 #---------------------------------------------------------------------------------------
