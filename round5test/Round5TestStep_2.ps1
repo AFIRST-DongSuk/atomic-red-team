@@ -19,3 +19,9 @@ invoke-atomictest T1095 -testnumber 2 -ExecutionLogPath $ExecutionLogPath -Timeo
 invoke-atomictest T1095 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1095 -testnumber 3 -ExecutionLogPath $ExecutionLogPath -TimeoutSeconds 10
 #---------------------------------------------------------------------------------------
+
+#---------------------------------------------------------------------------------------
+# T1132.001 - Data Encoding: Standard Encoding
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1132.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+#---------------------------------------------------------------------------------------
