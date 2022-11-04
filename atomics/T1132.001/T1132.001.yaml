@@ -33,7 +33,7 @@ atomic_tests:
     destination_url:
       description: Destination URL to post encoded data.
       type: Url
-      default: example.com
+      default: www.attacker.com
     plaintext:
       description: Plain text mimicking victim data sent to C2 server.
       type: String
