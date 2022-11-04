@@ -22,15 +22,17 @@ atomic_tests:
     #   type: String
     #   #default: P@ssw0rd1
     #   default: Password123!
-    computer_name:
-      description: Target Computer Name
-      type: String
-      #default: Target
-      default: COMAPNYDC1
+    #computer_name:
+    #  description: Target Computer Name
+    #  type: String
+    #  #default: Target
+    #  default: COMAPNYDC1
   executor:
     command: |
-      cmd.exe /c "net use \\#{computer_name}\#{share_name}"
-    name: command_prompt
+      cmd.exe /c "net use \\COMPANYDC1\#{share_name}"
+    cleanup_command: |
+      net use \\COMPANYDC1\#{share_name} /delete
+    name: powershell
 - name: Map Admin Share PowerShell
   auto_generated_guid: 514e9cd7-9207-4882-98b1-c8f791bae3c5
   description: |

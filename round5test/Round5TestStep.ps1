@@ -188,6 +188,7 @@ invoke-atomictest T1020 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPa
 # T1021.002 - Remote Services: SMB/Windows Admin Shares
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1021.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1021.002 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1021.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1021.002 -testnumber 3 -Getprereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 # invoke-atomictest T1021.002 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
