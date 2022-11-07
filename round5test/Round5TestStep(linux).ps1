@@ -7,12 +7,12 @@ Import-Module "" -Force
 ##############################################################
 
 #---------------------------------------------------------------------------------------
-# T1007 
+# T1007 - System Service Discovery
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1007 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1014
+# T1014 - Rootkit
 #---------------------------------------------------------------------------------------
 # invoke-atomictest T1014 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1014 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
@@ -20,12 +20,12 @@ invoke-atomictest T1007 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1014 -testnumber 4 -ExecutionLogPath $ExecutionLogPath\
 
 #---------------------------------------------------------------------------------------
-# T1016
+# T1016 - System Network Configuration Discovery
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1016 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1018
+# T1018 - Remote System Discovery
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1018 -testnumber 6 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1018 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
@@ -35,14 +35,14 @@ invoke-atomictest T1018 -testnumber 13 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1018 -testnumber 14 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1027
+# T1027 - Obfuscated Files or Information
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1027 -testnumber 1 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1027 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1027 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1027.002
+# T1027.002 - Obfuscated Files or Information: Software Packing
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1027.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1027.002 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
@@ -50,48 +50,48 @@ invoke-atomictest T1027.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1027.002 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1030
+# T1030 - Data Transfer Size Limits
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1030 -testnumber 1 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1030 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1030 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1033
+# T1033 - System Owner/User Discovery
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1033 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1036.005
+# T1036.005 - Masquerading: Match Legitimate Name or Location
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1036.005 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1036.005 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1036.006
+# T1036.006 - Masquerading: Space after Filename
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1036.006 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1036.006 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1040
+# T1040 - Network Sniffing
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1040 -testnumber 1 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1040 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1048
+# T1048 - Exfiltration Over Alternative Protocol
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1048 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1048 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1049
+# T1049 - System Network Connections Discovery
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1049 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1053.003
+# T1053.003 - Scheduled Task/Job: Cron
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1053.003 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1053.003 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
@@ -99,7 +99,7 @@ invoke-atomictest T1053.003 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionL
 invoke-atomictest T1053.003 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1056.001
+# T1056.001 - Input Capture: Keylogging
 #---------------------------------------------------------------------------------------
 # invoke-atomictest T1056.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1056.001 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
@@ -108,12 +108,12 @@ invoke-atomictest T1053.003 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1056.001 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1057
+# T1057 - Process Discovery
 #---------------------------------------------------------------------------------------
 # invoke-atomictest T1057 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1059.004
+# T1059.004 - Command and Scripting Interpreter: Bash
 #---------------------------------------------------------------------------------------
 # invoke-atomictest T1059.004 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1059.004 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
@@ -121,7 +121,7 @@ invoke-atomictest T1053.003 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1059.004 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1059.006
+# T1059.006 - Command and Scripting Interpreter: Python
 #---------------------------------------------------------------------------------------
 # invoke-atomictest T1059.006 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1059.006 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
@@ -129,19 +129,19 @@ invoke-atomictest T1053.003 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1059.006 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1069.001
+# T1069.001 - Permission Groups Discovery: Local Groups
 #---------------------------------------------------------------------------------------
 # invoke-atomictest T1069.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1070.002
+# T1070.002 - Indicator Removal on Host: Clear Linux or Mac System Logs
 #---------------------------------------------------------------------------------------
 # invoke-atomictest T1070.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1070.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1070.002 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1070.003
+# T1070.003 - Indicator Removal on Host: Clear Command History
 #---------------------------------------------------------------------------------------
 # invoke-atomictest T1070.003 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1070.003 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
@@ -154,7 +154,7 @@ invoke-atomictest T1053.003 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1070.003 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1070.004
+# T1070.004 - Indicator Removal on Host: File Deletion
 #---------------------------------------------------------------------------------------
 # invoke-atomictest T1070.004 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1070.004 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
@@ -162,22 +162,22 @@ invoke-atomictest T1053.003 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1070.004 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1071.001
+# T1071.001 - Application Layer Protocol: Web Protocols
 #---------------------------------------------------------------------------------------
 # invoke-atomictest T1071.001 -testnumber 3 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1074.001
+# T1074.001 - Data Staged: Local Data Staging
 #---------------------------------------------------------------------------------------
 # invoke-atomictest T1074.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1078.003
+# T1078.003 - Valid Accounts: Local Accounts
 #---------------------------------------------------------------------------------------
 # invoke-atomictest T1078.003 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1082
+# T1082 - System Information Discovery
 #---------------------------------------------------------------------------------------
 # invoke-atomictest T1082 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1082 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
@@ -187,13 +187,13 @@ invoke-atomictest T1053.003 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1082 -testnumber 24 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1083
+# T1083 - File and Directory Discovery
 #---------------------------------------------------------------------------------------
 # invoke-atomictest T1083 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1083 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1087.001
+# T1087.001 - Account Discovery: Local Account
 #---------------------------------------------------------------------------------------
 # invoke-atomictest T1087.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1087.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
@@ -203,12 +203,12 @@ invoke-atomictest T1053.003 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1087.001 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1090.001
+# T1090.001 - Proxy: Internal Proxy
 #---------------------------------------------------------------------------------------
 # invoke-atomictest T1090.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1105
+# T1105 - Ingress Tool Transfer
 #---------------------------------------------------------------------------------------
 # invoke-atomictest T1105 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1105 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
@@ -221,17 +221,17 @@ invoke-atomictest T1053.003 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1105 -testnumber 27 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1132.001
+# T1132.001 - Data Encoding: Standard Encoding
 #---------------------------------------------------------------------------------------
 # invoke-atomictest T1132.001 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1135
+# T1135 - Network Share Discovery
 #---------------------------------------------------------------------------------------
 # invoke-atomictest T1135 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1140
+# T1140 - Deobfuscate/Decode Files or Information
 #---------------------------------------------------------------------------------------
 # invoke-atomictest T1140 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1140 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
@@ -239,7 +239,7 @@ invoke-atomictest T1053.003 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1140 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1222.002
+# T1222.002 - File and Directory Permissions Modification: Linux and Mac File and Directory Permissions Modification
 #---------------------------------------------------------------------------------------
 # invoke-atomictest T1222.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1222.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
@@ -256,7 +256,7 @@ invoke-atomictest T1053.003 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1222.002 -testnumber 11 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1518.001
+# T1518.001 - Software Discovery: Security Software Discovery
 #---------------------------------------------------------------------------------------
 # invoke-atomictest T1518.001 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
 
