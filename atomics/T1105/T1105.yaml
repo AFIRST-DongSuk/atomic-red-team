@@ -759,10 +759,10 @@ atomic_tests:
     local_nimgrab:
       description: Local path to nimgrab
       type: Path
-      default: $env:temp\nim\nim-1.6.6\bin\nimgrab.exe
+      default: $env:temp\nimgrab.exe
   executor:
     command: |
-      cmd /c nimgrab.exe #{remote_file} #{destination_path}
+      cmd /c C:\Windows\Temp\nimgrab.exe #{remote_file} #{destination_path}
     cleanup_command: |
       del #{destination_path} >nul 2>&1
     name: command_prompt
