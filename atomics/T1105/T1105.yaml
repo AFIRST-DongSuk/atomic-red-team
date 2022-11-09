@@ -381,11 +381,11 @@ atomic_tests:
     remote_host:
       description: Remote hostname or IP address
       type: String
-      default: localhost
+      default: 192.168.1.4
     remote_port:
       description: Remote port to connect to
       type: Integer
-      default: 8443
+      default: 80
     output_file:
       description: Path of file to save output to
       type: Path
