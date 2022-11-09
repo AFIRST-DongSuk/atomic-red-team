@@ -16,12 +16,12 @@ atomic_tests:
   dependency_executor_name: bash
   dependencies:
     - description: |
-      delete file must exist on disk at specified location (#{file_to_delete})
-    prereq_command: |
-      if [ -f #{file_to_delete} ]; then exit 0; else exit 1; fi;
-    get_prereq_command: |
-      mkdir /tmp/victim-files
-      touch #{file_to_delete}
+        delete file must exist on disk at specified location (#{file_to_delete})
+      prereq_command: |
+        if [ -f #{file_to_delete} ]; then exit 0; else exit 1; fi;
+      get_prereq_command: |
+        mkdir /tmp/victim-files
+        touch #{file_to_delete}
   executor:
     command: |
       rm -f #{file_to_delete}
@@ -53,6 +53,15 @@ atomic_tests:
       description: Path of file to shred
       type: Path
       default: /tmp/victim-shred.txt
+  dependency_executor_name: bash
+  dependencies:
+    - description: |
+        delete file must exist on disk at specified location (#{file_to_shred})
+      prereq_command: |
+        if [ -f #{file_to_shred} ]; then exit 0; else exit 1; fi;
+      get_prereq_command: |
+        mkdir /tmp/victim-files
+        touch #{file_to_shred}
   executor:
     command: |
       shred -u #{file_to_shred}
