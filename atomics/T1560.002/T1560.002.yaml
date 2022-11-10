@@ -57,7 +57,7 @@ atomic_tests:
     name: bash
     elevation_required: false
     command: |
-      $which_python -c "import bz2;input_file=open('#{path_to_input_file}','rb');content=input_file.read();input_file.close();bz2content=bz2.compress(content,compresslevel=9);output_file=open('#{path_to_output_file}','w+');output_file.write(bz2content);output_file.close();"
+      python3 /round5test/atomics/T1560.002/src/T1560_bz2.py
     cleanup_command: |
       rm #{path_to_output_file}
 - name: Compressing data using zipfile in Python (Linux)
@@ -86,7 +86,7 @@ atomic_tests:
     name: bash
     elevation_required: false
     command: |
-      $which_python -c "from zipfile import ZipFile; ZipFile('#{path_to_output_file}', mode='w').write('#{path_to_input_file}')"
+      /usr/bin/python3 -c "from zipfile import ZipFile; ZipFile('#{path_to_output_file}', mode='w').write('#{path_to_input_file}')"
     cleanup_command: |
       rm #{path_to_output_file}
 - name: Compressing data using tarfile in Python (Linux)
@@ -115,6 +115,6 @@ atomic_tests:
     name: bash
     elevation_required: false
     command: |
-      $which_python -c "from zipfile import ZipFile; ZipFile('#{path_to_output_file}', mode='w').write('#{path_to_input_file}')" 
+      /usr/bin/python3 -c "from zipfile import ZipFile; ZipFile('#{path_to_output_file}', mode='w').write('#{path_to_input_file}')" 
     cleanup_command: |
       rm #{path_to_output_file}
