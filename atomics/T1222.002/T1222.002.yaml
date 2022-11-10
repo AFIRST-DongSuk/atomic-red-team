@@ -17,9 +17,22 @@ atomic_tests:
       description: Path of the file or folder
       type: Path
       default: /tmp/AtomicRedTeam/atomics/T1222.002
+    
+  dependency_executor_name: bash
+  dependencies:
+    - description: |
+        Change file must exist on disk at specified location (#{file_or_folder})
+      prereq_command: |
+        if [ -f #{file_or_folder} ]; then exit 0; else exit 1; fi;
+      get_prereq_command: |
+        mkdir /tmp/AtomicRedTeam
+        mkdir /tmp/AtomicRedTeam/atomics
+        echo "T1222.002-1 Test!" >> #{file_or_folder}
   executor:
     command: |
       chmod #{numeric_mode} #{file_or_folder}
+    cleanup_command: |
+      rm -rf /tmp/AtomicRedTeam
     name: bash
 - name: chmod - Change file or folder mode (symbolic mode)
   auto_generated_guid: fc9d6695-d022-4a80-91b1-381f5c35aff3
