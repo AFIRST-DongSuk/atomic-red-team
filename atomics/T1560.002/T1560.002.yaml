@@ -22,13 +22,13 @@ atomic_tests:
     - description: |
         Requires Python
       prereq_command: |
-        which_python=`which python`; $which_python -V
+        which_python=`which python3
       get_prereq_command: |
   executor:
     name: bash
     elevation_required: false
     command: |
-      $which_python -c "import gzip;input_file=open('#{path_to_input_file}', 'rb');content=input_file.read();input_file.close();output_file=gzip.GzipFile('#{path_to_output_file}','wb','compresslevel=6');output_file.write(content);output_file.close();"
+      python3 /round5test/atomics/T1560.002/src/T1560_gzip.py
     cleanup_command: |
       rm #{path_to_output_file}
 - name: Compressing data using bz2 in Python (Linux)
