@@ -50,9 +50,21 @@ atomic_tests:
       description: Path of the file or folder
       type: Path
       default: /tmp/AtomicRedTeam/atomics/T1222.002
+  dependency_executor_name: bash
+  dependencies:
+    - description: |
+        Change file must exist on disk at specified location (#{file_or_folder})
+      prereq_command: |
+        if [ -f #{file_or_folder} ]; then exit 0; else exit 1; fi;
+      get_prereq_command: |
+        mkdir /tmp/AtomicRedTeam
+        mkdir /tmp/AtomicRedTeam/atomics
+        echo "T1222.002-2 Test!" >> #{file_or_folder}
   executor:
     command: |
       chmod #{symbolic_mode} #{file_or_folder}
+    cleanup_command: |
+      rm -rf /tmp/AtomicRedTeam
     name: bash
 - name: chmod - Change file or folder mode (numeric mode) recursively
   auto_generated_guid: ea79f937-4a4d-4348-ace6-9916aec453a4
@@ -70,9 +82,21 @@ atomic_tests:
       description: Path of the file or folder
       type: Path
       default: /tmp/AtomicRedTeam/atomics/T1222.002
+  dependency_executor_name: bash
+  dependencies:
+    - description: |
+        Change file must exist on disk at specified location (#{file_or_folder})
+      prereq_command: |
+        if [ -f #{file_or_folder} ]; then exit 0; else exit 1; fi;
+      get_prereq_command: |
+        mkdir /tmp/AtomicRedTeam
+        mkdir /tmp/AtomicRedTeam/atomics
+        echo "T1222.002-3 Test!" >> #{file_or_folder}
   executor:
     command: |
       chmod -R #{numeric_mode} #{file_or_folder}
+    cleanup_command: |
+      rm -rf /tmp/AtomicRedTeam
     name: bash
 - name: chmod - Change file or folder mode (symbolic mode) recursively
   auto_generated_guid: 0451125c-b5f6-488f-993b-5a32b09f7d8f
@@ -90,9 +114,21 @@ atomic_tests:
       description: Path of the file or folder
       type: Path
       default: /tmp/AtomicRedTeam/atomics/T1222.002
+  dependency_executor_name: bash
+  dependencies:
+    - description: |
+        Change file must exist on disk at specified location (#{file_or_folder})
+      prereq_command: |
+        if [ -f #{file_or_folder} ]; then exit 0; else exit 1; fi;
+      get_prereq_command: |
+        mkdir /tmp/AtomicRedTeam
+        mkdir /tmp/AtomicRedTeam/atomics
+        echo "T1222.002-4 Test!" >> #{file_or_folder}
   executor:
     command: |
       chmod -R #{symbolic_mode} #{file_or_folder}
+    cleanup_command: |
+      rm -rf /tmp/AtomicRedTeam
     name: bash
 - name: chown - Change file or folder ownership and group
   auto_generated_guid: d169e71b-85f9-44ec-8343-27093ff3dfc0
@@ -109,14 +145,27 @@ atomic_tests:
     file_or_folder:
       description: Path of the file or folder
       type: Path
-      default: /tmp/AtomicRedTeam/atomics/T1222.002/T1222.002.yaml
+      default: /tmp/AtomicRedTeam/atomics/T1222.002
     group:
       description: Group name of desired group
       type: String
       default: root
+  dependency_executor_name: bash
+  dependencies:
+    - description: |
+        Change file must exist on disk at specified location (#{file_or_folder})
+      prereq_command: |
+        if [ -f #{file_or_folder} ]; then exit 0; else exit 1; fi;
+      get_prereq_command: |
+        mkdir /tmp/AtomicRedTeam
+        mkdir /tmp/AtomicRedTeam/atomics
+        echo "T1222.002-5 Test!" >> #{file_or_folder}
+        chown afirst:afirst #{file_or_folder}
   executor:
     command: |
       chown #{owner}:#{group} #{file_or_folder}
+    cleanup_command: |
+      rm -rf /tmp/AtomicRedTeam
     name: bash
 - name: chown - Change file or folder ownership and group recursively
   auto_generated_guid: b78598be-ff39-448f-a463-adbf2a5b7848
@@ -138,9 +187,22 @@ atomic_tests:
       description: Group name of desired group
       type: String
       default: root
+  dependency_executor_name: bash
+  dependencies:
+    - description: |
+        Change file must exist on disk at specified location (#{file_or_folder})
+      prereq_command: |
+        if [ -f #{file_or_folder} ]; then exit 0; else exit 1; fi;
+      get_prereq_command: |
+        mkdir /tmp/AtomicRedTeam
+        mkdir /tmp/AtomicRedTeam/atomics
+        echo "T1222.002-6 Test!" >> #{file_or_folder}
+        chown afirst:afirst #{file_or_folder}
   executor:
     command: |
       chown -R #{owner}:#{group} #{file_or_folder}
+    cleanup_command: |
+      rm -rf /tmp/AtomicRedTeam
     name: bash
 - name: chown - Change file or folder mode ownership only
   auto_generated_guid: 967ba79d-f184-4e0e-8d09-6362b3162e99
@@ -157,10 +219,23 @@ atomic_tests:
     file_or_folder:
       description: Path of the file or folder
       type: Path
-      default: /tmp/AtomicRedTeam/atomics/T1222.002/T1222.002.yaml
+      default: /tmp/AtomicRedTeam/atomics/T1222.002
+  dependency_executor_name: bash
+  dependencies:
+    - description: |
+        Change file must exist on disk at specified location (#{file_or_folder})
+      prereq_command: |
+        if [ -f #{file_or_folder} ]; then exit 0; else exit 1; fi;
+      get_prereq_command: |
+        mkdir /tmp/AtomicRedTeam
+        mkdir /tmp/AtomicRedTeam/atomics
+        echo "T1222.002-7 Test!" >> #{file_or_folder}
+        chown afirst:afirst #{file_or_folder}
   executor:
     command: |
       chown #{owner} #{file_or_folder}
+    cleanup_command: |
+      rm -rf /tmp/AtomicRedTeam
     name: bash
 - name: chown - Change file or folder ownership recursively
   auto_generated_guid: 3b015515-b3d8-44e9-b8cd-6fa84faf30b2
@@ -178,9 +253,22 @@ atomic_tests:
       description: Path of the file or folder
       type: Path
       default: /tmp/AtomicRedTeam/atomics/T1222.002
+  dependency_executor_name: bash
+  dependencies:
+    - description: |
+        Change file must exist on disk at specified location (#{file_or_folder})
+      prereq_command: |
+        if [ -f #{file_or_folder} ]; then exit 0; else exit 1; fi;
+      get_prereq_command: |
+        mkdir /tmp/AtomicRedTeam
+        mkdir /tmp/AtomicRedTeam/atomics
+        echo "T1222.002-7 Test!" >> #{file_or_folder}
+        chown afirst:afirst #{file_or_folder}
   executor:
     command: |
       chown -R #{owner} #{file_or_folder}
+    cleanup_command: |
+      rm -rf /tmp/AtomicRedTeam
     name: bash
 - name: chattr - Remove immutable file attribute
   auto_generated_guid: e7469fe2-ad41-4382-8965-99b94dd3c13f
@@ -195,9 +283,20 @@ atomic_tests:
       description: Path of the file
       type: Path
       default: /var/spool/cron/root
+  dependency_executor_name: bash
+  dependencies:
+    - description: |
+        Change file must exist on disk at specified location (#{file_to_modify})
+      prereq_command: |
+        if [ -d #{file_to_modify} ]; then exit 0; else exit 1; fi;
+      get_prereq_command: |
+        mkdir #{file_to_modify}
+        chattr +i #{file_to_modify}
   executor:
     command: |
       chattr -i #{file_to_modify}
+    cleanup_command: |
+      rm -rf #{file_to_modify}
     name: sh
 - name: Chmod through c script
   auto_generated_guid: 973631cf-6680-4ffa-a053-045e1b6b67ab
@@ -220,12 +319,16 @@ atomic_tests:
   - description: |
        Compile the script from (#{source_file}). Destination is #{compiled_file}
     prereq_command: |
-        gcc #{source_file} -o #{compiled_file}
+        if [ -f #{compiled_file} ]; then exit 0; else exit 1; fi;
     get_prereq_command: |
+        touch /tmp/T1222.002-10.sh
         gcc #{source_file} -o #{compiled_file}
   executor:
     command: |
-       #{compiled_file} /tmp/ T1222002
+       #{compiled_file} /tmp/ T1222.002-10.sh
+    cleanup_command: |
+      rm -rf #{compiled_file}
+      rm -rf /tmp/T1222.002-10.sh
     name: sh
 - name: Chown through c script
   auto_generated_guid: 18592ba1-5f88-4e3c-abc8-ab1c6042e389
@@ -248,11 +351,16 @@ atomic_tests:
   - description: |
        Compile the script from (#{source_file}). Destination is #{compiled_file}
     prereq_command: |
-        gcc #{source_file} -o #{compiled_file}
+        if [ -f #{compiled_file} ]; then exit 0; else exit 1; fi;
     get_prereq_command: |
+        touch /tmp/T1222.002-11.sh
+        chown afirst:afirst /tmp/T1222.002-11.sh
         gcc #{source_file} -o #{compiled_file}
   executor:
     command: |
-       sudo #{compiled_file} #{source_file}
+       sudo #{compiled_file} /tmp/T1222.002-11.sh
+    cleanup_command: |
+      rm -rf #{compiled_file}
+      rm -rf /tmp/T1222.002-11.sh
     name: sh
     elevation_required: true
