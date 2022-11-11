@@ -21,7 +21,7 @@ atomic_tests:
   - description: |
       encode the command into base64 file
     prereq_command: |
-      exit 1
+      if [ -f /tmp/encoded.dat ]; then exit 0; else exit 1; fi;
     get_prereq_command: |
       touch /tmp/encoded.dat
       echo "#{shell_command}" | base64 > /tmp/encoded.dat
