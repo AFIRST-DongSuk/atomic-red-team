@@ -104,7 +104,7 @@ atomic_tests:
       type: String
       default: /tmp/.keyboard.log
   executor:
-    name: sh
+    name: bash
     elevation_required: false 
     command: | 
       trap 'echo "$(date +"%d/%m/%y %H:%M:%S.%s") $USER $BASH_COMMAND" >> #{output_file}' DEBUG
