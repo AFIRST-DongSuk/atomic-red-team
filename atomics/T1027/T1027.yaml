@@ -132,11 +132,11 @@ atomic_tests:
     sender:
       description: sender email
       type: String
-      default: test@corp.com
+      default: afirst@atomicstest.com
     receiver:
       description: receiver email
       type: String
-      default: test@corp.com
+      default: administrator@contoso.com
     smtp_server:
       description: SMTP Server IP Address
       type: String
