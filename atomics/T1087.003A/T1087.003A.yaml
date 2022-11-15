@@ -1,4 +1,4 @@
-attack_technique: T1087.003
+attack_technique: T1087.003A
 display_name: 'Account Discovery: Email Account'
 atomic_tests:
 - name: Enumerate all Eamil Accounts
