@@ -40,6 +40,7 @@ invoke-atomictest T1021.004A -testnumber 1 -Cleanup -ExecutionLogPath $
 #---------------------------------------------------------------------------------------
 # T1027 - Obfuscated Files or Information
 #---------------------------------------------------------------------------------------
+invoke-atomictest T1027 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1027 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1027 -testnumber 7 -ExecutionLogPath $ExecutionLogPath 
 
