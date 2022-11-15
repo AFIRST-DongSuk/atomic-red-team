@@ -185,3 +185,5 @@ invoke-atomictest T1573 -testnumber 1 -ExecutionLogPath $ExecutionLogPath -timeo
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1574.008 -testnumber 1 -ExecutionLogPath $ExecutionLogPath -TimeoutSeconds 10
 invoke-atomictest T1574.008 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+
+Stop-Transcript
