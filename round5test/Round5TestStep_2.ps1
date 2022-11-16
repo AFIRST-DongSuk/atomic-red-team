@@ -85,6 +85,9 @@ invoke-atomictest T1083 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPa
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1087.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1087.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1087.002 -testnumber 4 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1087.002 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1087.002 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1087.002 -testnumber 5 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1087.002 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1087.002 -testnumber 6 -Getprereqs -ExecutionLogPath $ExecutionLogPath
