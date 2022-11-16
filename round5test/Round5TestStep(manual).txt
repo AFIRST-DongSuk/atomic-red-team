@@ -88,6 +88,18 @@ Step 1. invoke-atomictest t1548.002 -testnumber 17 -GetPrereqs -ExecutionLogPath
 Step 2. invoke-atomictest t1548.002 -testnumber 17 -ExecutionLogPath $ExecutionLogPath
 
 #------------------------------------------------------------
+T1564.008A - Hide Artifacts: Email Hiding Rules
+Atomic Test #1 -"Email Hiding Rules - New-InboxRule"
+#------------------------------------------------------------
+Step 1. Exchange Management Shell 실행
+Step 2. New-InboxRule -Name Spammail -mailbox Administrator@contoso.com -subjectcontainswords "[hacking]" -movetofolder "administrator@contoso.com:\Junk Email" 입력 # 메일을 수신할 때, 특정 키워드가 포함될 시 Junk Email 수신함으로 이동하도록 Rule 설정
+Step 3. invoke-atomictest T1564.008A -testnumber 1 -ExecutionLogPath $ExecutionLogPath # "[hacking]" 키워드가 포함되어있는 메일 발송
+Step 4. https://localhost/owa/#path=/mail 로그인 # 계정 : contoso\administrator, 패스워드: administrator 계정 패스워드 동일)
+Step 5. Junk Email 수신함에서 메일 확인
+
+
+
+#------------------------------------------------------------
 T1005A - Data from Local System
 #------------------------------------------------------------
 Step 1. cmd /c dir /s/b *.exe > C:\R5\atomic-red-team\atomics\T1005A\src\exe_list.txt
