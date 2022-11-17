@@ -14,7 +14,8 @@ atomic_tests:
       default: 'PathToAtomic\T1029A\src\scp_script.bat'
   executor:
     command: |
-      SCHTASKS /create /SC MINUTE /MO 1 /TR #{destination_path} /TN T1059_TEST
-
+      SCHTASKS /create /SC MINUTE /MO 1 /TR #{destination_path} /TN T1059_TEST /f
+    cleanup_command: |
+      schtasks /delete /tn T1059_TEST /f
     name: powershell
     elevation_required: true
