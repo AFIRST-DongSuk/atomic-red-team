@@ -106,3 +106,12 @@ Step 1. cmd /c dir /s/b *.exe > C:\R5\atomic-red-team\atomics\T1005A\src\exe_lis
 Step 2. ftp -v -n -i -d -s:C:\R5\atomic-red-team\atomics\T1005A\src\ftp_script.txt
 Step 3. bye
 Step 4. del C:\R5\atomic-red-team\atomics\T1005A\src\exe_list.txt
+
+
+
+
+#------------------------------------------------------------
+Atomic Test #26 - Download a file using wscript
+#------------------------------------------------------------
+Step 1. wscript "C:\R5\atomic-red-team\atomics\T1105\src\T1105-download-file.vbs"
+Step 2. del .\Atomic-License.txt
