@@ -801,7 +801,7 @@ atomic_tests:
       default: $env:temp\nimgrab.exe
   executor:
     command: |
-      cmd /c C:\Windows\Temp\nimgrab.exe #{remote_file} #{destination_path}
+      cmd /c C:\R5\atomic-red-team\atomics\T1105\src\nimgrab.exe #{remote_file} #{destination_path}
     cleanup_command: |
       del #{destination_path} >nul 2>&1
     name: command_prompt
