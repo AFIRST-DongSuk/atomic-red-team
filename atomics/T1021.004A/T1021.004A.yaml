@@ -36,7 +36,7 @@ atomic_tests:
       
   executor:
     command: |-
-      .$env:TEMP\putty -ssh #{User_Name}@#{Remote_host} -pw #{User_Password}
+      PathToAtomicsFolder\T1021.004A\src\putty.exe -ssh #{User_Name}@#{Remote_host} -pw #{User_Password}
       sleep 2
       Stop-Process -name "Putty"
     cleanup_command: |-
