@@ -107,8 +107,8 @@ invoke-atomictest T1087.002 -testnumber 15 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 # T1087.003A - Account Discovery: Email Account
 #---------------------------------------------------------------------------------------
-invoke-atomictest T1087.003 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1087.003 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1087.003A -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1087.003A -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
 # T1095 - Non-Application Layer Protocol
