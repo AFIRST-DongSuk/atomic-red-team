@@ -12,7 +12,7 @@ Import-Module "/round5test/invoke-atomicredteam/Invoke-AtomicRedTeam.psd1" -Forc
 invoke-atomictest T1007 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1014 - Rootkit
+# T1014 - Rootkit #test
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1014 -testnumber 1 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1014 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
