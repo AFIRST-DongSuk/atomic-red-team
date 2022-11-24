@@ -1,0 +1,23 @@
+자동 스크립트로 테스트 진행하기 어려운 항목들을 따로 모은 수동 테스트 가이드입니다. 
+각 항목별로 Step에 맞춰 테스트를 진행 해주세요.
+
+#------------------------------------------------------------
+# T1003 - OS Credential Dumping
+
+# Atomic Test 2 - Credential Dumping with NPPSpy
+#------------------------------------------------------------
+Step 1. invoke-atomictest T1003 -testnumber 2 -GetPrereqs -ExecutionLogPath $ExecutionLogPath 실행
+Step 2. invoke-atomictest T1003 -testnumber 2 -ExecutionLogPath $ExecutionLogPath 실행
+Step 3. Step2 진행 후 로그아웃 해야지 파일이 생성됨. (Windows lock으로는 안됨). 
+Step 4. invoke-atomictest T1003 -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath 실행
+
+#------------------------------------------------------------
+# T1056.001A - Input Capture: Keylogging
+
+# Atomic Test 1 - Input Capture
+#------------------------------------------------------------
+Step 1. pip3 install pynput
+Step 2. python C:\atomic-red-team\atomics\T1056.001\src\Get-Keystrokes-afirst.py
+Step 3. Remove-Item C:\atomic-red-team\atomics\T1056.001\src\logs.txt -ErrorAction Ignore
+
+
