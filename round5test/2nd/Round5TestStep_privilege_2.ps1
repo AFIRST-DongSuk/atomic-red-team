@@ -5,6 +5,12 @@ Import-Module "c:\round5test\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" -Fo
 Start-Transcript "c:\round5test\Round5TestStep_privilege_2_ps1.log"
 
 #---------------------------------------------------------------------------------------
+# T1029A
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1029A -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1029A -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
 # T1055 - Process Injection
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1055 -testnumber 1 -Getprereqs -ExecutionLogPath $ExecutionLogPath # 관리자 권한
