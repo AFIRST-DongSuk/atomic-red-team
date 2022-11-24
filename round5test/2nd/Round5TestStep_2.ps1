@@ -42,7 +42,6 @@ invoke-atomictest T1021.004A -testnumber 1 -Cleanup -ExecutionLogPath $
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1027 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1027 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1027 -testnumber 7 -ExecutionLogPath $ExecutionLogPath 
 
 #---------------------------------------------------------------------------------------
 # T1048 - Exfiltration Over Alternative Protocol
@@ -85,9 +84,9 @@ invoke-atomictest T1083 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPa
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1087.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1087.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
-#invoke-atomictest T1087.002 -testnumber 4 -Getprereqs -ExecutionLogPath $ExecutionLogPath
-#invoke-atomictest T1087.002 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
-#invoke-atomictest T1087.002 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1087.002 -testnumber 4 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1087.002 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1087.002 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1087.002 -testnumber 5 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1087.002 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1087.002 -testnumber 6 -Getprereqs -ExecutionLogPath $ExecutionLogPath
@@ -139,7 +138,7 @@ invoke-atomictest T1105 -testnumber 24 -Cleanup -ExecutionLogPath $ExecutionLogP
 # invoke-atomictest T1105 -testnumber 26 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1105 -testnumber 26 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1105 -testnumber 26 -Cleanup -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1105 -testnumber 28 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+# invoke-atomictest T1105 -testnumber 28 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1105 -testnumber 28 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1105 -testnumber 28 -Cleanup -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1105 -testnumber 29 -ExecutionLogPath $ExecutionLogPath
@@ -180,14 +179,42 @@ invoke-atomictest T1218.011 -testnumber 7 -GetPrereqs -ExecutionLogPath $Executi
 invoke-atomictest T1218.011 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
+# T1482 - Domain Trust Discovery
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1482 -testnumber 3 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1482 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1518 - Software Discovery
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1518 -testnumber 6 -ExecutionLogPath $ExecutionLogPath -Timeoutseconds 100
+
+#---------------------------------------------------------------------------------------
+# T1548.002 - Abuse Elevation Control Mechanism: sBypass User Access Control
+#---------------------------------------------------------------------------------------
+invoke-atomictest t1548.002 -testnumber 19 -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1555 - Credentials from Password Stores
+#---------------------------------------------------------------------------------------
+invoke-atomictest t1555 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1560 - Archive Collected Data
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1560 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1560 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
+# T1569.002 - System Services: Service Execution
+#---------------------------------------------------------------------------------------
+invoke-atomictest T1569.002 -testnumber 2 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1569.002 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+
+#---------------------------------------------------------------------------------------
 # T1573 - Encrypted Channel
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1573 -testnumber 1 -ExecutionLogPath $ExecutionLogPath -timeoutseconds 10
 
-#---------------------------------------------------------------------------------------
-# T1574.008 - Hijack Execution Flow: Path Interception by Search Order Hijacking
-#---------------------------------------------------------------------------------------
-invoke-atomictest T1574.008 -testnumber 1 -ExecutionLogPath $ExecutionLogPath -TimeoutSeconds 10
-invoke-atomictest T1574.008 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
 
 Stop-Transcript
