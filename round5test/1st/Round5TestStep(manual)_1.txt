@@ -3,7 +3,6 @@
 
 #------------------------------------------------------------
 # T1003 - OS Credential Dumping
-
 # Atomic Test 2 - Credential Dumping with NPPSpy
 #------------------------------------------------------------
 Step 1. invoke-atomictest T1003 -testnumber 2 -GetPrereqs -ExecutionLogPath $ExecutionLogPath 실행
@@ -13,7 +12,6 @@ Step 4. invoke-atomictest T1003 -testnumber 2 -Cleanup -ExecutionLogPath $Execut
 
 #------------------------------------------------------------
 # T1056.001A - Input Capture: Keylogging
-
 # Atomic Test 1 - Input Capture
 #------------------------------------------------------------
 Step 1. pip3 install pynput
