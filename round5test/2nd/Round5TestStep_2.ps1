@@ -29,13 +29,12 @@ invoke-atomictest T1018 -testnumber 19 -ExecutionLogPath $ExecutionLogPath
 # T1021.002 - Remote Services: SMB/Windows Admin Shares
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1021.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1021.002 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath 
 
 #---------------------------------------------------------------------------------------
 # T1021.004A - Remote Services: SSH
 #---------------------------------------------------------------------------------------
-invoke-atomictest T1021.004A -testnumber 1 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1021.004A -testnumber 1 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1021.004A -testnumber 1 -Cleanup -ExecutionLogPath $
 
 #---------------------------------------------------------------------------------------
 # T1027 - Obfuscated Files or Information
@@ -162,6 +161,7 @@ invoke-atomictest T1132.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1204.002 -testnumber 9 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1204.002 -testnumber 9 -Cleanup -ExecutionLogPath $ExecutionLogPath
+
 
 #---------------------------------------------------------------------------------------
 # T1218 - Signed Binary Proxy Execution
