@@ -20,10 +20,4 @@ invoke-atomictest T1069.002 -testnumber 3 -ExecutionLogPath $ExecutionLogPath # 
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1518.001 -testnumber 5 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
 
-#---------------------------------------------------------------------------------------
-# T1564.004
-#---------------------------------------------------------------------------------------
-# invoke-atomictest T1564.004 -testnumber 1 -ExecutionLogPath $ExecutionLogPath # 관리자 권한
-
-
 Stop-Transcript
