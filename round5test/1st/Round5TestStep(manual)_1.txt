@@ -20,4 +20,10 @@ Step 1. pip3 install pynput
 Step 2. python C:\atomic-red-team\atomics\T1056.001\src\Get-Keystrokes-afirst.py
 Step 3. Remove-Item C:\atomic-red-team\atomics\T1056.001\src\logs.txt -ErrorAction Ignore
 
+#------------------------------------------------------------
+# T1059.001 - Command and Scripting Interpreter: PowerShell
+# Atomic Test #10 - Powershell Invoke-DownloadCradle
+#------------------------------------------------------------
+Step 1. invoke-atomictest T1059.001 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
+
 
