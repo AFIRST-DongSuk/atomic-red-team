@@ -800,8 +800,10 @@ atomic_tests:
       default: $env:temp\nimgrab.exe
   executor:
     command: |
-      cmd /c C:\R5\atomic-red-team\atomics\T1105\src\nimgrab.exe #{remote_file} #{destination_path}
+      cmd /c copy C:\round5test\atomics\T1105\src\nimgrab.exe %TEMP%\nimgrab.exe
+      cmd /c %TEMP%\nimgrab.exe #{remote_file} #{destination_path}
     cleanup_command: |
+      del %TEMP%\nimgrab.exe >nul 2>&1
       del #{destination_path} >nul 2>&1
     name: command_prompt
   dependency_executor_name: powershell 
