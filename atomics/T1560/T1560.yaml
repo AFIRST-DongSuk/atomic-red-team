@@ -14,11 +14,11 @@ atomic_tests:
     input_file:
       description: Path that should be compressed into our output file
       type: Path
-      default: $env:USERPROFILE
+      default: $env:USERPROFILE\Desktop
     output_file:
       description: Path where resulting compressed data should be placed
       type: Path
-      default: $env:USERPROFILE\T1560-data-ps.zip
+      default: $env:USERPROFILE\Desktop\T1560-data-ps.zip
   executor:
     name: powershell
     elevation_required: false
