@@ -109,16 +109,16 @@ invoke-atomictest T1053.003 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 # T1056.001 - Input Capture: Keylogging
 #---------------------------------------------------------------------------------------
-invoke-atomictest T1056.001A -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1056.001 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 
-invoke-atomictest T1056.001A -testnumber 3 -Getprereqs -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1056.001A -testnumber 3 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1056.001A -testnumber 3 -Cleanup -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1056.001A -testnumber 4 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1056.001 -testnumber 3 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1056.001 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1056.001 -testnumber 3 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1056.001 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
 # invoke-atomictest T1056.001 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1056.001A -testnumber 6 -Getprereqs -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1056.001A -testnumber 6 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1056.001A -testnumber 6 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1056.001 -testnumber 6 -Getprereqs -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1056.001 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1056.001 -testnumber 6 -Cleanup -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
 # T1057 - Process Discovery
@@ -305,7 +305,7 @@ invoke-atomictest T1222.002 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1222.002 -testnumber 6 -Cleanup -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1222.002 -testnumber 7 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1222.002 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1222.002 -testnumber 7 - Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1222.002 -testnumber 7 -Cleanup -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1222.002 -testnumber 8 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1222.002 -testnumber 8 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1222.002 -testnumber 8 -Cleanup -ExecutionLogPath $ExecutionLogPath

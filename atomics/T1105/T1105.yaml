@@ -30,7 +30,7 @@ atomic_tests:
     - description: |
         push file must exist on disk at specified location (#{local_path})
       prereq_command: |
-        if [ -d #{local_path} ]; then exit 0; else exit 1; fi;
+        if [ -f #{local_path} ]; then exit 0; else exit 1; fi;
       get_prereq_command: |
         touch #{local_path}
         echo "T1105-1 Test!" >> #{local_path}
