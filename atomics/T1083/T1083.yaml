@@ -15,7 +15,6 @@ atomic_tests:
   executor:
     command: |
       dir /s c:\ >> #{output_file}
-      dir /s "c:\Documents and Settings" >> #{output_file}
       dir /s "c:\Program Files\" >> #{output_file}
       dir "%systemdrive%\Users\*.*" >> #{output_file}
       dir "%userprofile%\AppData\Roaming\Microsoft\Windows\Recent\*.*" >> #{output_file}

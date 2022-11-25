@@ -175,9 +175,9 @@ invoke-atomictest T1218 -testnumber 10 -ExecutionLogPath $ExecutionLogPath
 # T1218.011 - Signed Binary Proxy Execution: Rundll32
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1218.011 -testnumber 6 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1218.011 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1218.011 -testnumber 6 -ExecutionLogPath $ExecutionLogPath -timeoutseconds 3
 invoke-atomictest T1218.011 -testnumber 7 -GetPrereqs -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1218.011 -testnumber 7 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1218.011 -testnumber 7 -ExecutionLogPath $ExecutionLogPath -timeoutseconds 3
 
 #---------------------------------------------------------------------------------------
 # T1482 - Domain Trust Discovery
