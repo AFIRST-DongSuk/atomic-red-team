@@ -29,7 +29,7 @@ invoke-atomictest T1018 -testnumber 19 -ExecutionLogPath $ExecutionLogPath
 # T1021.002 - Remote Services: SMB/Windows Admin Shares
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1021.002 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1021.002 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath 
+invoke-atomictest T1021.002 -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
 # T1021.004A - Remote Services: SSH
@@ -52,7 +52,7 @@ invoke-atomictest T1027 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
 #---------------------------------------------------------------------------------------
 invoke-atomictest T1059.007A -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1059.007A -testnumber 1 -Cleanup -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1059.007A -testnumber 2 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1059.007A -testnumber 2 -ExecutionLogPath $ExecutionLogPath -timeoutseconds 3
 invoke-atomictest T1059.007A -testnumber 2 -Cleanup -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
@@ -149,6 +149,7 @@ invoke-atomictest T1105 -testnumber 29 -Cleanup -ExecutionLogPath $ExecutionLogP
 invoke-atomictest T1110.003 -testnumber 1 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1110.003 -testnumber 2 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1110.003 -testnumber 5 -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1110.003 -testnumber 6 -Getprereqs -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1110.003 -testnumber 6 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------

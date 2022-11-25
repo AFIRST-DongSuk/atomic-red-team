@@ -713,18 +713,17 @@ atomic_tests:
     replace_cab:
       description: UNC Path to the cab file
       type: Path
-      default:  \\127.0.0.1\c$\r5\atomic-red-team\atomics\T1105\src\redcanary.cab
+      default:  \\127.0.0.1\c$\round5test\atomics\T1105\src\redcanary.cab
     Path_replace:
       description: Path to replace.exe
       type: Path
       default: C:\Windows\System32\replace.exe
   executor:
     command: |
-      del %TEMP%\redcanary.cab >nul 2>&1
       #{Path_replace} #{replace_cab} $env:temp /A
     cleanup_command: |
-      del %TEMP%\redcanary.cab >nul 2>&1
-    name: command_prompt
+      Remove-Item -Path $env:temp\redcanary.cab -Force
+    name: powershell
 
 - name: certreq download
   auto_generated_guid: 6fdaae87-c05b-42f8-842e-991a74e8376b

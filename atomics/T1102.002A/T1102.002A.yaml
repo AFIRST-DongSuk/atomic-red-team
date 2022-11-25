@@ -9,7 +9,7 @@ atomic_tests:
   - windows
   executor:
     command: |
-      echo client (in Windows)
+        echo client (in Windows)
         echo Open cmd.exe 
         echo cd <test.py 위치>
         echo python test.py -k test https://script.google.com/macros/s/AKfycbzVbXkfOAJTmzxSUDeeuyYW-RJ6CMrFzF8bWtXObtSQWMmzINoXgi2isks5S2m6q6X7kw/exec
