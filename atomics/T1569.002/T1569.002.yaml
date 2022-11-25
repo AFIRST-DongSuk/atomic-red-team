@@ -43,7 +43,7 @@ atomic_tests:
     remote_host:
       description: Remote hostname or IP address
       type: String
-      default: localhost
+      default: 192.168.1.100
     # user_name:
     #   description: Username
     #   type: String
