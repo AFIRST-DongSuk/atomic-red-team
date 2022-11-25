@@ -186,11 +186,6 @@ invoke-atomictest T1482 -testnumber 3 -Getprereqs -ExecutionLogPath $ExecutionLo
 invoke-atomictest T1482 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
-# T1518 - Software Discovery
-#---------------------------------------------------------------------------------------
-invoke-atomictest T1518 -testnumber 6 -ExecutionLogPath $ExecutionLogPath -Timeoutseconds 100
-
-#---------------------------------------------------------------------------------------
 # T1548.002 - Abuse Elevation Control Mechanism: sBypass User Access Control
 #---------------------------------------------------------------------------------------
 invoke-atomictest t1548.002 -testnumber 19 -ExecutionLogPath $ExecutionLogPath
