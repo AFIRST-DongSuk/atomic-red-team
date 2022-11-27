@@ -216,7 +216,7 @@ invoke-atomictest T1082 -testnumber 24 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1083 -testnumber 3 -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1083 -testnumber 3 -Cleanup -ExecutionLogPath $ExecutionLogPath
 invoke-atomictest T1083 -testnumber 4 -ExecutionLogPath $ExecutionLogPath
-invoke-atomictest T1083 -testnumber 3 -Cleanup -ExecutionLogPath $ExecutionLogPath
+invoke-atomictest T1083 -testnumber 4 -Cleanup -ExecutionLogPath $ExecutionLogPath
 
 #---------------------------------------------------------------------------------------
 # T1087.001 - Account Discovery: Local Account
